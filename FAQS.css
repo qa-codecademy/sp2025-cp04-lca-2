@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Inter , sans-serif;
     background-color: #fff;
     color: #333;
   }
@@ -27,12 +27,12 @@ body {
   }
   
   details {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid black;
     padding: 20px 0;
   }
   
   details:last-child {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid black;
   }
   
   summary {
@@ -62,7 +62,7 @@ body {
   
   details p {
     margin-top: 10px;
-    color: #555;
+    color: #9c9d9d;
     line-height: 1.5;
   }
   
