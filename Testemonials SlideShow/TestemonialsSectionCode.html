@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slideshow with Autoplay & Dots</title>
+  <link rel="stylesheet" href="TestemonialsSectionCode.css" />
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img src="img/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="img/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="img/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 3">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <script src="TestemonialsSectionCode.js"></script>
+</body>
+</html>
