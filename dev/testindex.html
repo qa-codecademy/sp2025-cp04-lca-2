@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slideshow with Autoplay & Dots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/joinuspart1.css" />
+  <link rel="stylesheet" href="css/TestemonialsSectionCode.css">
+  <link rel="stylesheet" href="css/impact.css">
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img src="images/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="images/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 2">
+    </div>
+
+    <div class="slide">
+      <img src="images/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 3">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+    <div class="dots" id="dots"></div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="text-section">
+        <div class="heading">Celebrating Our Impact: Transforming Lives and Communities Together</div>
+        <div class="subtext">
+          At LOKAL AKT, we are proud to have positively impacted our community through various initiatives. Our commitment to sustainable development and social inclusion has led to meaningful changes in Makedonski Brod.
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">75%</div>
+            <div class="stat-desc">of youth engaged in our programs.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">100%</div>
+            <div class="stat-desc">commitment to environmental protection initiatives.</div>
+          </div>
+        </div>
+      </div>
+      <div class="image-placeholder">
+        <img src="images/jHhrFKM__VP6ontYS_b1dBYQp9O_AAOxDzbnjP4oNcY.jpg" alt="Impact Image" class="impact-image">
+      </div>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="contentJoin">
+      <h1>Join Us in Making Change</h1>
+      <p>Discover how you can contribute to sustainable development and 
+        community engagement in Makedonski Brod.</p>
+      <div class="buttonsForJoin">
+        <a href="#" class="btn primaryJoin">Learn More</a>
+        <a href="#" class="btn secondaryJoin">Get Involved →</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/Testjs.js"></script>
+</body>
+</html>
