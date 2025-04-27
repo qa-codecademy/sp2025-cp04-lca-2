@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Inter , sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .faq-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .faq-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .subheading {
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .faq-container {
+    text-align: left;
+  }
+  
+  details {
+    border-top: 1px solid black;
+    padding: 20px 0;
+  }
+  
+  details:last-child {
+    border-bottom: 1px solid black;
+  }
+  
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details[open] summary::after {
+    content: "▲";
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  details summary::after {
+    content: "▼";
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  details p {
+    margin-top: 10px;
+    color: #9c9d9d;
+    line-height: 1.5;
+  }
+  
+  .contact-box {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .contact-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-box p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .contact-button {
+    background-color: white;
+    color: #45a049;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid #45a049;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-button:hover {
+    background-color: #45a049;
+  }
