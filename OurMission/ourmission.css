@@ -1,4 +1,5 @@
-body {
+
+  body {
     margin: 0;
     font-family: Inter, sans-serif;
     background: #f8faf6;
@@ -6,47 +7,37 @@ body {
   
   .Our-Mission {
     text-align: center;
-    padding: 60px 20px;
+    padding: 0; /* No padding, because background image fills it */
     max-width: 1200px;
     margin: 0 auto;
+  }
+  
+  .background-image {
+    background-image: url('img/486614516_642852121846868_3888101782957086764_n.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay for better readability */
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin-top: -163px;
+    margin-left: -700px;
   }
   
   .Our-Mission h2 {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #222;
+    color: #fff;
   }
   
   .subheading {
-    color: #555;
-    margin-bottom: 40px;
+    color: #ddd;
+    margin-bottom: 0;
   }
-  
-  .project-grid {
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 20px;
-   justify-content: center;
-  }
-  
-  /* Pozicija na slika */
-  .tall-image {
-    grid-area: tall;
-    height: 520px;
-  }
-  
-  .project-grid div {
-    background-color: #ddd;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .project-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
