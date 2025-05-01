@@ -1,9 +1,7 @@
-body {
+
+  .sectionJoinUs {
     margin: 0;
-    font-family: Inter, sans-serif;
-  }
-  
-  .section {
+    font-family: 'Inter', sans-serif;
     background-color: #84bb40;
     color: white;
     padding: 80px 40px;
