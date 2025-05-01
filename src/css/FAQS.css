@@ -1,11 +1,15 @@
-body {
-    margin: 0;
+/*body {
+    margin: 0px;
     font-family: 'Inter' , sans-serif;
     background-color: #fff;
     color: #333;
-  }
+  }*/
   
   .faq-section {
+    margin: 0px;
+    font-family: 'Inter' , sans-serif;
+    background-color: #fff;
+    color: #333;
     max-width: 700px;
     margin: 0 auto;
     padding: 60px 20px;
@@ -95,4 +99,5 @@ body {
   
   .contact-button:hover {
     background-color: #45a049;
+    color: white;
   }
