@@ -6,7 +6,7 @@
     text-align: center;
     padding: 40px;
     position: relative;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
     background: #fff;
     padding: 20px;
@@ -45,7 +45,7 @@
   }
   
   button.next {
-    top: 230px;
+    top: 315px;
     right: 10px;
   }
   

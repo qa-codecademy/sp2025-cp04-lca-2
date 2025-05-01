@@ -6,7 +6,7 @@
     background: #f9fafb;
     color: #333;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
   }
   
@@ -34,10 +34,9 @@
   
   .team-card {
     background: #f9fafb;
-    padding: 1.5rem;
     flex: 1 1 calc(25% - 1rem);
     min-width: 260px;
-    max-width: 300px;
+    max-width: 360px;
     text-align: left;
   }
   
