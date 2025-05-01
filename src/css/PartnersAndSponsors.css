@@ -1,7 +1,7 @@
 
   .partners-section {
     margin: 0;
-    font-family:'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     background-color: #ffffff;
     text-align: center;
     padding: 60px 20px;
@@ -29,7 +29,6 @@
   
   .logo-item {
     background-color: #ddd;
-    border-radius: 8px;
     overflow: hidden;
     height: 150px;
     display: flex;
