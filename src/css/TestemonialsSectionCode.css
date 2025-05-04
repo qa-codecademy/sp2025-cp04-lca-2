@@ -1,0 +1,75 @@
+
+  
+  .slideshow-container {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    max-width: 1600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  button.prev,
+  button.next {
+    margin: 20px 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid black;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+  }
+  /*Pozicija na kopcinjata*/
+  button.prev {
+    bottom: 243px;
+    left: 10px;
+  }
+  
+  button.next {
+    top: 315px;
+    right: 10px;
+  }
+  
+  button:hover {
+    background: #555;
+  }
+  
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
