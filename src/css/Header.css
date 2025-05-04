@@ -74,35 +74,37 @@
   height: 100%;
 }
 
-.header_nav_section nav {
+.header_nav_section_desktop_nav {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
-.header_nav_section nav ul {
+.header_nav_section_desktop_nav ul {
   display: flex;
   gap: 32px;
   align-items: center;
   margin-right: 24px;
 }
 
-.header_nav_section nav ul li {
+.header_nav_section_desktop_nav ul li,
+.header_nav_section_mobile_nav_body ul li {
   list-style: none;
   font-size: 16px;
   font-weight: 500;
 }
 
-.header_nav_section nav ul li a {
+.header_nav_section_desktop_nav ul li a,
+.header_nav_section_mobile_nav_body ul li a {
   color: black;
   text-decoration: none;
 }
 
-.header_nav_section nav ul li a:hover {
+.header_nav_section_desktop_nav ul li a:hover {
   text-decoration: underline;
 }
-
-.header_nav_section nav button {
+.header_nav_section_desktop_nav button,
+.header_nav_section_mobile_nav_body button {
   border: 2px solid #73b925;
   background-color: white;
   outline: none;
@@ -115,21 +117,22 @@
   transition: all ease-in 0.1s;
 }
 
-.header_nav_section nav button:hover {
+.header_nav_section_desktop_nav button:hover {
   background-color: #73b925;
   color: white;
 }
 
-.header_nav_section nav button:active {
+.header_nav_section_desktop_nav button:active {
   transform: translateY(2px);
 }
 
-.header_nav_section nav button + button {
+.header_nav_section_desktop_nav button + button,
+.header_nav_section_mobile_nav_body button + button {
   background-color: #73b925;
   color: white;
 }
 
-.header_nav_section nav button + button:hover {
+.header_nav_section_desktop_nav button + button:hover {
   background-color: white;
   color: #73b925;
 }
@@ -137,4 +140,107 @@
 .header_nav_section img {
   width: 150px;
   height: 50px;
+}
+
+.header_nav_section_burger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .header_nav_section_desktop_nav ul {
+    gap: 20px;
+    margin-right: 8px;
+  }
+  .header_nav_section_desktop_nav ul li {
+    font-size: 15px;
+  }
+  .header_nav_section_desktop_nav button {
+    padding: 6px 14px;
+  }
+}
+@media (max-width: 764px) {
+  .hide_mobile {
+    display: none !important;
+  }
+  .header_info_section_contact {
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+  }
+  .header_nav_section_burger {
+    display: block;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .header_nav_section_mobile_nav {
+    position: absolute;
+    background-color: white;
+    height: 320px;
+    width: 100%;
+    left: -100vw;
+    top: 0;
+    z-index: 200;
+    padding: 0.75rem 1.75rem;
+    transition: left 0.1s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header_nav_section_mobile_nav.open {
+    left: 0;
+  }
+  .header_nav_section_mobile_nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 12px;
+  }
+
+  .header_nav_section_mobile_nav_header i {
+    font-size: 20px;
+  }
+
+  .header_nav_section_mobile_nav_body {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header_nav_section_mobile_nav_body ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header_nav_section_mobile_nav_body button {
+    padding: 6px 14px;
+    margin-top: 24px;
+    margin-right: 8px;
+  }
+
+  .header_nav_section_mobile_nav_body button:hover {
+    background-color: white;
+    color: #73b925;
+  }
+  .header_nav_section_mobile_nav_body button + button:hover {
+    background-color: #73b925;
+    color: white;
+  }
+
+  .header_nav_section_mobile_socials {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .header_nav_section_mobile_socials i {
+    font-size: 18px;
+    color: #1c1c1c;
+  }
+}
+
+@media (min-width: 764px) {
+  .hide_desktop {
+    display: none;
+  }
 }
