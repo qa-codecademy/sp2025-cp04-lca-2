@@ -1,43 +1,49 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f8faf6;
+}
 
-  body {
-    margin: 0;
-    font-family: Inter, sans-serif;
-    background: #f8faf6;
-  }
-  
-  .Our-Mission {
-    text-align: center;
-    padding: 0; /* No padding, because background image fills it */
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .background-image {
-    background-image: url('img/486614516_642852121846868_3888101782957086764_n.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .content {
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay for better readability */
-    padding: 20px 40px;
-    border-radius: 8px;
-    margin-top: -163px;
-    margin-left: -700px;
-  }
-  
-  .Our-Mission h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  .subheading {
-    color: #ddd;
-    margin-bottom: 0;
-  }
+.Our-Mission {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.mission-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 40px;
+}
+
+.Our-Mission h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.subheading {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 500px;
+  text-align: right;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
