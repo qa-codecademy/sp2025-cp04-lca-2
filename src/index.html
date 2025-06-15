@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/JoinUsPart1.css" />
   <link rel="stylesheet" href="css/Footer.css">
   <link rel="stylesheet" href="css/FeatureHome.css">
+  <link rel="stylesheet" href="css/ProjectAndCalls.css">
 </head>
 
 <body>
@@ -61,7 +62,10 @@
             <li><a href="">Our Team</a></li>
             <li><a href="">Gallery</a></li>
           </ul>
-          <button aria-label="Join as a member">Join</button>
+          <div id="login-section">
+            <input type="password" id="admin-password" placeholder="Лозинка за администратор" class="hidden" />
+            <button  onclick="handleLoginClick()" id="login-button">Log In</button>
+          </div>
           <button aria-label="Donate to support">Donate</button>
         </nav>
         <i class="fa-solid fa-bars header_nav_section_burger" id="burger-icon" aria-label="Open mobile menu"></i>
@@ -80,7 +84,7 @@
                 <li><a href="">Our Team</a></li>
                 <li><a href="">Gallery</a></li>
               </ul>
-              <button aria-label="Join as a member">Join</button>
+              <button aria-label="Join as a member">Log In</button>
               <button aria-label="Donate to support">Donate</button>
             </div>
             <div class="header_nav_section_mobile_socials" aria-label="Social media links">
@@ -94,6 +98,25 @@
       </div>
     </div>
   </header>
+  <!--Admin Feature-->
+  <section id="admin-panel" class="hidden">
+    <button onclick="logoutAdmin()" id="logout-button">Log Out</button>
+
+    <h2>Add Project</h2>
+    <input type="text" id="project-title" placeholder="Наслов на проектот">
+    <textarea id="project-description" placeholder="Опис на проектот"></textarea>
+    <select id="project-status">
+      <option value="current">Current</option>
+      <option value="completed">Completed</option>
+    </select>
+    <input type="file" id="project-images" multiple>
+    <button onclick="addProject()" id="add-project-button">Add Project</button>
+
+    <h2>Public Calls</h2>
+    <textarea id="call-text" placeholder="Внеси текст за јавниот повик"></textarea>
+    <input type="file" id="call-image">
+    <button onclick="addCall()" id="publish-call-button">Publish Call</button>
+  </section>
   <!--Home Feature-->
   <section id="home-hero-section">
     <div id="home-overlay">
@@ -295,17 +318,31 @@
     </div>
   </section>
   <!--Project Show Case Feature-->
-  <section class="project-showcase">
+  <section id="projectShowcase">
     <h2>Project Showcase</h2>
-    <p class="subheading">Explore our impactful community initiatives and events.</p>
-
-    <div class="project-grid">
-      <div class="tall-image"><img src="https://via.placeholder.com/600x800" alt="Project 1"></div>
-      <div class="wide-top"><img src="https://via.placeholder.com/600x400" alt="Project 2"></div>
-      <div class="wide-bottom"><img src="https://via.placeholder.com/600x400" alt="Project 4"></div>
-      <div class="square"><img src="https://via.placeholder.com/400x400" alt="Project 3"></div>
+    <div id="filter-buttons">
+      <button id="filter-all" onclick="setFilter('all')">All</button>
+      <button id="filter-current" onclick="setFilter('current')">Current</button>
+      <button id="filter-completed" onclick="setFilter('completed')">Completed</button>
     </div>
-  </section>
+    <div id="project-list"></div>
+    </section>
+    <!-- Public Calls Feature -->
+  <section id="publicCalls">
+    <h2>Public Calls</h2>
+    <div id="call-list"></div>
+  
+    <!-- Viewer за слики во голем приказ -->
+    <div id="image-viewer" class="hidden">
+      <button class="close-button" onclick="closeImageViewer(event)">&times;</button>
+      <img id="full-image" src="">
+      <div class="nav-buttons">
+        <button onclick="prevImage(event)">&laquo; Претходна</button>
+        <button onclick="nextImage(event)">Следна &raquo;</button>
+      </div>
+    </div>
+    </section>
+    <script src="ProjectAndCalls.js"></script>
   <!--FAQs Feature-->
   <section class="faq-section">
     <h1>FAQs</h1>
@@ -428,7 +465,7 @@
   <!--Scripts-->
   <script src="scripts/TestemonialsSectionCode.js"></script>
   <script src="scripts/Header.js" defer></script>
-
+  <script src="scripts/ProjectAndCalls.js"></script>
 </body>
 
 </html>
