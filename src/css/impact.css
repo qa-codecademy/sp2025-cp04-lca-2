@@ -1,81 +1,95 @@
 
   
-  .container {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background-color: #f9faf9;
-    color: #2d2d2d;
+  .impact_section {
+    background-color: #F9FAF7;
+  }
+
+  .impact_container {
     display: flex;
-    flex-direction: column;
+    min-height: 100vh;
     align-items: center;
-    padding: 100px;
+    width: min(1440px, 90%);
+    margin: 0 auto;
+    gap: 64px;
   }
   
-  .content {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .text-section {
+  .impact_text {
     flex: 1;
-    margin-top: 100px;
   }
   
-  .heading {
-    font-size: 1.8rem;
+  .impact_heading {
+    color: rgba(0,0,0,0.8);
     font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 40px;
   }
   
-  .subtext {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #444;
+  .impact_subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.8);
+    margin-top: 24px;
+    line-height: 1.5em;
   }
   
-  .stats {
+  .impact_stats {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 36px;
   }
   
-  .stat {
+  .impact_stat {
     flex: 1;
     min-width: 140px;
   }
   
-  .stat-value {
-    font-size: 1.8rem;
+  .impact_stat_value {
+    font-size: 48px;
     font-weight: 700;
-    color: #6ab63f;
+    color: #73B925;
   }
   
-  .stat-desc {
-    color: #777;
+  .impact_stat_desc {
+    color: #8c8c8c;
+    font-size: 16px;
+    font-weight: 500;
   }
   
-  .image-placeholder {
+  .impact_image_container {
     flex: 1;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    overflow: hidden; 
-    padding: 0;
+
   }
   
-  .impact-image {
+  .impact_image {
     width: 100%;
-    height: 100%;
+    height: 640px;
     object-fit: cover;
+    border-radius: 5px;
   }
   
-  @media (min-width: 768px) {
-    .content {
-      flex-direction: row;
+  @media (max-width: 1024px) {
+    .impact_container {
+      flex-direction: column;
+      padding: 64px 0;
+    }
+
+  }
+
+  @media (max-width: 640px) {
+    .impact_heading {
+      font-size: 36px;
+    }
+
+    .impact_subtitle {
+      font-size: 16px;
+    }
+
+    .impact_stat_value {
+      font-size: 36px;
+    }
+
+    .impact_image {
+      height: 380px;
     }
   }
   

@@ -126,15 +126,15 @@
   transform: translateY(2px);
 }
 
-.header_nav_section_desktop_nav button + button,
+.header_donate_btn,
 .header_nav_section_mobile_nav_body button + button {
-  background-color: #73b925;
-  color: white;
+  background-color: #73b925 !important;
+  color: white !important;
 }
 
-.header_nav_section_desktop_nav button + button:hover {
-  background-color: white;
-  color: #73b925;
+.header_donate_btn:hover {
+  background-color: white !important;
+  color: #73b925 !important;
 }
 
 .header_nav_section img {
