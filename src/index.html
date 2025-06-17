@@ -15,13 +15,17 @@
   <link href="css/ProjectShowCase.css" rel="stylesheet" />
   <link href="css/OurTeam.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/impact.css" />
-  <link rel="stylesheet" href="css/JoinUsSectoion.css" />
   <link rel="stylesheet" href="css/PartnersAndSponsors.css" />
   <link rel="stylesheet" href="css/TestemonialsSectionCode.css">
-  <link rel="stylesheet" href="css/JoinUsPart1.css" />
   <link rel="stylesheet" href="css/Footer.css">
   <link rel="stylesheet" href="css/FeatureHome.css">
   <link rel="stylesheet" href="css/ProjectAndCalls.css">
+  <link rel="stylesheet" href="css/MissionAndVision.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/EmpoweringCommunities.css">
+  <link rel="stylesheet" href="css/WhyChooseUs.css">
+  <link rel="stylesheet" href="css/JoinUs.css">
+  <link rel="stylesheet" href="css/JoinUsFooter.css">
 </head>
 
 <body>
@@ -66,7 +70,7 @@
             <input type="password" id="admin-password" placeholder="Лозинка за администратор" class="hidden" />
             <button  onclick="handleLoginClick()" id="login-button">Log In</button>
           </div>
-          <button aria-label="Donate to support">Donate</button>
+          <button aria-label="Donate to support" class="header_donate_btn">Donate</button>
         </nav>
         <i class="fa-solid fa-bars header_nav_section_burger" id="burger-icon" aria-label="Open mobile menu"></i>
         <div class="hide_desktop header_nav_section_mobile_nav" role="navigation" aria-label="Mobile navigation">
@@ -118,202 +122,271 @@
     <button onclick="addCall()" id="publish-call-button">Publish Call</button>
   </section>
   <!--Home Feature-->
-  <section id="home-hero-section">
-    <div id="home-overlay">
-      <h1 id="home-title">Empowering Communities for <br> Sustainable Development</h1>
-      <p id="home-subtitle">
-        At LOKAL AKT, we believe in fostering collaboration between citizens and local institutions to create a vibrant community. Our mission is to advocate for sustainable practices that enhance the quality of life in Makedonski Brod.
-      </p>
-      <div id="home-button-group">
-        <button id="home-join-btn">Join</button>
-        <button id="home-learn-btn">Learn More</button>
+  <section class="home_hero_section">
+    <div class="home_hero_container">
+      <h1 class="home_hero_heading">Empowering Communities for Sustainable Development</h1>
+      <h3 class="home_hero_subheading">At LOKAL AKT, we believe in fostering collaboration between citizens and local institutions to create a vibrant community. Our mission is to advocate for sustainable practices that enhance the quality of life in Makedonski Brod.</h3>
+      <div class="home_hero_btn_group">
+        <button>Join</button>
+        <button>Learn More</button>
       </div>
     </div>
   </section>
+<!--  Mission and Vision Section-->
+  <section class="mission_vision">
+    <div class="mission_vision_text">
+      <h1>Our Mission & Vision</h1>
+      <p>At LOKAL AKT, we champion sustainable practices that enhance community well-being. Our initiatives foster collaboration among citizens and local institutions, driving impactful change in Makedonski Brod.</p>
+    </div>
+    <div class="mission_vision_image">
+      <img src="images/mission_and_vision.jpg" alt="mission and vision image" class="default-image-shadow">
+    </div>
+  </section>
+<!--  Empowering Communities for Sustainable Development Section-->
+  <section class="empowering_communities">
+    <div class="empowering_communities_width_container">
+      <h1 class="empowering_communities_title">
+        Empowering Communities for Sustainable Local Development and Environmental Protection
+      </h1>
+      <div class="empowering_communities_container">
+        <div class="empowering_communities_card">
+          <img src="images/empowering_section_image_1.jpg" alt="empowering communities image 1" class="default-image-shadow">
+          <h3>Fostering Youth Activism and Social Inclusion in Makedonski Brod</h3>
+          <p>We provide resources and support for local initiatives that drive positive change.</p>
+          <span>Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="empowering_communities_card">
+        <img src="images/empowering_section_image_2.jpg" alt="empowering communities image 1" class="default-image-shadow">
+        <h3>Promoting Environmental Awareness and Cultural Heritage Preservation</h3>
+        <p>Our programs aim to protect the environment while celebrating our rich cultural history.</p>
+        <span>Join Us <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+        <div class="empowering_communities_card">
+        <img src="images/empowering_section_image_3.jpg" alt="empowering communities image 1" class="default-image-shadow">
+        <h3>Supporting Social Entrepreneurship and Rural Tourism for Economic Growth</h3>
+        <p>We empower local entrepreneurs to create jobs and boost the local economy.</p>
+        <span>Get Involved <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+      </div>
+    </div>
+  </section>
+<!--  Why Choose Us Section-->
+  <section class="why_choose_us">
+    <div class="why_choose_us_text">
+      <p class="section_tag">Empower</p>
+      <h2 class="why_choose_us_title">Why Choose LOKAL AKT for Sustainable Development</h2>
+      <h3 class="why_choose_us_subtitle">At LOKAL AKT, we prioritize community engagement and sustainable practices. Our commitment to quality assurance ensures that every initiative positively impacts Makedonski Brod.</h3>
+      <div>
+        <div>
+          <h4>Community Focus</h4>
+          <p>We bridge gaps between citizens and local authorities for effective collaboration.</p>
+        </div>
+        <div>
+          <h4>Quality Initiatives</h4>
+          <p>Our projects are designed to foster lasting change and community improvement.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why_choose_us_images">
+      <img src='images/why3.jpg' alt="why us image 2">
+    </div>
+  </section>
   <!--Join Us part 1 Feature-->
-  <section id="hero">
-    <div id="hero-content">
-      <h1 id="hero-title">Join Us in Making Change</h1>
-      <p id="hero-subtitle">
-        Discover how you can contribute to sustainable development and community engagement in Makedonski Brod.
-      </p>
-      <div id="hero-buttons">
-        <a id="learn-more" href="#">Learn More</a>
-        <a id="get-involved" href="#">
-          Get Involved <span id="arrow">→</span>
-        </a>
+  <section class="join_us">
+    <div class="join_us_container">
+      <h2 class="join_us_title">Join Us in Making Change</h2>
+      <p class="join_us_subtitle">Discover how you can contribute to sustainable development and community engagement <br/> in Makedonski Brod.</p>
+      <div class="join_us_btn_group">
+        <button class="green-btn join_us_green_btn">Learn More</button>
+        <button>Get Involved <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
   </section>
   <!--Our Team Feature-->
-  <section class="team-section">
-    <h4 class="subtitle">Together</h4>
-    <h1 class="title">Our Team</h1>
-    <p class="description">Meet the passionate individuals driving our mission forward.</p>
-
-    <div class="team-grid">
-      <!-- Ovde treba da se stavat tolku diva kolku sto ima clenovi vo timot-->
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <section class="our_team">
+    <div class="our_team_container">
+      <div class="our_team_header">
+        <p class="section_tag">Together</p>
+        <h2>Our Team</h2>
+        <p>Meet the passionate individuals driving our mission forward.</p>
+      </div>
+      <div class="our_team_grid">
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Jane Smith</h3>
+          <p class="our_team_role">Youth Coordinator</p>
+          <p class="our_team_bio">Empowering youth through activism and education for a brighter future.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
         </div>
       </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
+      <div class="our_team_footer">
+          <h2>We're hiring!</h2>
+          <p>Discover how you can contribute to our mission.</p>
+          <button class="green-btn our_team_footer_green_btn" >Open positions <i class="fa-solid fa-arrow-right"></i></button>
       </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="avatar-placeholder"></div>
-        <h3>Jane Smith</h3>
-        <p class="role">Youth Coordinator</p>
-        <p class="bio">Empowering youth through activism and education for a brighter future.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hiring-section">
-      <h2>We're hiring!</h2>
-      <p>Discover how you can contribute to our mission.</p>
-      <a href="#" class="button">Open positions →</a>
     </div>
   </section>
-  <!--Testemonial Feature-->
-  <section class="slideshow-container">
-    <div class="slide active">
-      <img src="images/Screenshot 2025-04-22 at 17.22.21.png" alt="Image 1">
-    </div>
-    <div class="slide">
-      <img src="images/Testemonials2.png" alt="Image 2">
-    </div>
-    <div class="slide">
-      <img src="images/Testemonials3.png" alt="Image 3">
+  <!--Testimonial Feature-->
+  <section class="testimonial_section">
+    <div class="testimonial_slide testimonial_slide_active">
+      <div>
+        <h3 class="testimonial_quote">"LOKarstarstrstrastAL AKT has transformed our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
+        <div class="testimonial_avatar"></div>
+        <h4 class="testimonial_name">Anakin Skywalker</h4>
+        <h4 class="testimonial_role">Community Leader, NGO</h4>
+      </div>
+    </div>    <div class="testimonial_slide ">
+      <div>
+        <h3 class="testimonial_quote">" AKT has transformed our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
+        <div class="testimonial_avatar"></div>
+        <h4 class="testimonial_name">Ron</h4>
+        <h4 class="testimonial_role">Community Leader, NGO</h4>
+      </div>
+    </div>    <div class="testimonial_slide ">
+      <div>
+        <h3 class="testimonial_quote">"    our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
+        <div class="testimonial_avatar"></div>
+        <h4 class="testimonial_name">Bojan</h4>
+        <h4 class="testimonial_role">Community Leader, NGO</h4>
+      </div>
     </div>
 
-    <button class="prev" onclick="changeSlide(-1)">❮</button>
-    <button class="next" onclick="changeSlide(1)">❯</button>
 
-    <div class="dots" id="dots"></div>
+
+    <button class="testimonial_prev_btn" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="testimonial_next_btn" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
+
+    <div class="testimonial_dots" id="dots"></div>
   </section>
   <!--Impact Feature-->
-  <section class="container">
-    <div class="content">
-      <div class="text-section">
-        <div class="heading">Celebrating Our Impact: Transforming Lives and Communities Together</div>
-        <div class="subtext">
+  <section class="impact_section">
+    <div class="impact_container">
+      <div class="impact_text">
+        <div class="impact_heading">Celebrating Our Impact: Transforming Lives and Communities Together</div>
+        <div class="impact_subtitle">
           At LOKAL AKT, we are proud to have positively impacted our community through various initiatives. Our
           commitment to sustainable development and social inclusion has led to meaningful changes in Makedonski Brod.
         </div>
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-value">75%</div>
-            <div class="stat-desc">of youth engaged in our programs.</div>
+        <div class="impact_stats">
+          <div class="impact_stat">
+            <div class="impact_stat_value">75%</div>
+            <div class="impact_stat_desc">of youth engaged in our programs.</div>
           </div>
-          <div class="stat">
-            <div class="stat-value">100%</div>
-            <div class="stat-desc">commitment to environmental protection initiatives.</div>
+          <div class="impact_stat">
+            <div class="impact_stat_value">100%</div>
+            <div class="impact_stat_desc">commitment to environmental protection initiatives.</div>
           </div>
         </div>
       </div>
-      <div class="image-placeholder">
-        <img src="images/jHhrFKM__VP6ontYS_b1dBYQp9O_AAOxDzbnjP4oNcY.jpg" alt="Impact Image" class="impact-image">
+      <div class="impact_image_container">
+        <img src="images/impact-image.jpg" alt="Impact Image" class="impact_image default-image-shadow">
       </div>
     </div>
   </section>
   <!--Partners and Sponsors Feature-->
-  <section class="partners-section">
+  <section class="partners_section">
     <h2>Our Partners & Sponsors</h2>
-    <p class="quote">“Some random quote someone said” - someone</p>
+    <p class="partners_quote">“Some random quote someone said” - someone</p>
 
-    <div class="logo-grid">
-      <div class="logo-item">
-        <img src="path/to/logo1.png" alt="Partner Logo 1">
+    <div class="partners_grid">
+      <div class="partners_grid_item">
+        <img src="path/to/logo1.png" alt="Partner Logo 1" class="partner_logo">
       </div>
-      <div class="logo-item">
-        <img src="path/to/logo2.png" alt="Partner Logo 2">
+      <div class="partners_grid_item">
+        <img src="path/to/logo1.png" alt="Partner Logo 1" class="partner_logo">
       </div>
-      <div class="logo-item">
-        <img src="path/to/logo3.png" alt="Partner Logo 3">
+      <div class="partners_grid_item">
+        <img src="path/to/logo1.png" alt="Partner Logo 1" class="partner_logo">
       </div>
-      <div class="logo-item">
-        <img src="path/to/logo4.png" alt="Partner Logo 4">
+      <div class="partners_grid_item">
+        <img src="path/to/logo1.png" alt="Partner Logo 1" class="partner_logo">
       </div>
-      <div class="logo-item">
-        <img src="path/to/logo5.png" alt="Partner Logo 5">
+      <div class="partners_grid_item">
+        <img src="path/to/logo1.png" alt="Partner Logo 1" class="partner_logo">
       </div>
-      <div class="logo-item">
-        <img src="path/to/logo6.png" alt="Partner Logo 6">
+      <div class="partners_grid_item">
+        <img src="path/to/logo1.png" alt="Partner Logo 1" class="partner_logo">
       </div>
     </div>
   </section>
@@ -344,123 +417,107 @@
     </section>
     <script src="ProjectAndCalls.js"></script>
   <!--FAQs Feature-->
-  <section class="faq-section">
+  <section class="faq_section">
     <h1>FAQs</h1>
-    <p class="subheading">Find quick answers to your most pressing questions about our organization and initiatives.</p>
+    <p class="faq_subtitle">Find quick answers to your most pressing questions about our organization and initiatives.</p>
 
-    <div class="faq-container">
+    <div class="faq_container">
       <details open>
-        <summary>What is LOKAL AKT?</summary>
+        <summary class="faq_accordion_heading">What is LOKAL AKT?</summary>
         <p>LOKAL AKT is a non-profit organization dedicated to promoting sustainable local development. We focus on
           fostering cooperation between local institutions and citizens. Our goal is to enhance the quality of life in
           Makedonski Brod.</p>
       </details>
 
-      <details open>
-        <summary>How can I help?</summary>
+      <details>
+        <summary class="faq_accordion_heading">How can I help?</summary>
         <p>You can help by volunteering for our projects or donating to support our initiatives. Every contribution
           makes a difference in our community. Join us in making a positive impact!</p>
       </details>
 
-      <details open>
-        <summary>What programs do you offer?</summary>
+      <details >
+        <summary class="faq_accordion_heading">What programs do you offer?</summary>
         <p>We offer programs focused on youth activism, environmental protection, and social entrepreneurship. Our
           initiatives aim to address local challenges and promote community engagement. Explore our website for detailed
           information on each program.</p>
       </details>
 
-      <details open>
-        <summary>How can I get involved?</summary>
+      <details >
+        <summary class="faq_accordion_heading">How can I get involved?</summary>
         <p>Getting involved is easy! You can participate in our events, volunteer for projects, or collaborate with us
           on initiatives. Check our events calendar for upcoming opportunities.</p>
       </details>
 
-      <details open>
-        <summary>Where is LOKAL AKT located?</summary>
+      <details >
+        <summary class="faq_accordion_heading">Where is LOKAL AKT located?</summary>
         <p>LOKAL AKT is based in Makedonski Brod, where we actively engage with the local community. Our office is open
           to the public for inquiries and collaboration. Visit us to learn more about our work.</p>
       </details>
     </div>
 
-    <div class="contact-box">
+    <div class="faq_contact_container">
       <h2>Still have questions?</h2>
       <p>We are here to help you!</p>
-      <button class="contact-button">Contact</button>
+      <button class="green-btn faq_contact_btn">Contact</button>
     </div>
   </section>
   <!--Join Us Feature-->
-  <section class="sectionJoinUs">
-    <div class="left">Join Us in Making Change</div>
-    <div class="right">
-      <p>
-        Be a part of our mission to foster sustainable development and empower our community.
-        Together, we can create a brighter future for Makedonski Brod.
-      </p>
-      <div class="buttons">
-        <a href="#" class="learn-more">Learn More</a>
-        <a href="#" class="sign-up">Sign Up</a>
+  <section class="join_us_footer">
+    <div class="join_us_footer_container">
+      <div class="join_us_footer_heading">
+        <h2>Join Us in Making Change</h2>
+      </div>
+      <div class="join_us_footer_desc">
+        <p>Be a part of our mission to foster sustainable development and empower our community. Together, we can create a brighter future for Makedonski Brod.</p>
+        <div class="join_us_footer_btn_group">
+          <button >Learn More</button>
+          <button >Sign Up</button>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
+<!--  Footer Section-->
   <footer>
-
     <div class="footer_container">
-        <div class="footer_logo">
-            <img src="./images/Footer_logo.png" alt="Logo" width="150" height="50">
+      <img src="images/Footer_logo.png" alt="footer logo">
+      <div class="footer_links">
+        <a href="#">Get Involved</a>
+        <a href="#">Our Mission</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Volunteer Today</a>
+        <a href="#">Donate Now</a>
+      </div>
+      <div class="footer_info">
+        <div class="footer_info_contact">
+          <p>
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span class="sr-only">Email:</span>
+            <a>info@gmail.com</a>
+          </p>
+          <p>
+            <img src="images/Header_Phone_Icon.svg" alt="Phone icon" aria-hidden="true">
+            <span class="sr-only">Phone:</span>
+            <a>+389 71 234 567</a>
+          </p>
         </div>
-        <div class="footer_links">
-            <a href="#">Get Involved</a>
-            <a href="#">Our Mission</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Volunteer Today</a>
-            <a href="#">Donate Now</a>
+        <div class="footer_info_socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
         </div>
-
-        <div class="footer_conatiner_2">
-            <div class="footer_info_section">
-                <div class="footer_info_section_container">
-                    <div class="footer_info_section_contact">
-                        <p>
-                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-                            <span class="sr-only">Email:</span>
-                            <a>info@gmail.com</a>
-                        </p>
-                        <p>
-                            <img class="footer_phone_icon" src="images/Header_Phone_Icon.svg" alt="Phone icon" aria-hidden="true">
-                            <span class="sr-only">Phone:</span>
-                            <a>+389 71 234 567</a>
-                        </p>
-                    </div>
-                    <div class="footer_info_section_socials" aria-label="Social media links">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"
-                                aria-hidden="true"></i></a>
-                        <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"
-                                aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"
-                                aria-hidden="true"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"
-                                aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <hr>
+      <div class="footer_policy">
+        <p>© 2025 LOKAL AKT. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
         </div>
-
-
-        <div class="footer_bottom">
-            <p>© 2025 LOKAL AKT. All rights reserved.</p>
-            <div>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Cookie Policy</a>
-            </div>
-        </div>
+      </div>
     </div>
-
-
-</footer>
-
+  </footer>
 
   <!--Scripts-->
   <script src="scripts/TestemonialsSectionCode.js"></script>

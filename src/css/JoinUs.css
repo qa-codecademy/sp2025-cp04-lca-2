@@ -1,0 +1,79 @@
+.join_us {
+    height: 440px;
+    display: flex;
+    align-items: center;
+    background-image: url('../images/join-us-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.join_us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+.join_us_container {
+    width: min(1440px, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.join_us_title {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.join_us_subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.80);
+    font-weight: 400;
+}
+
+.join_us_btn_group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.join_us_green_btn {
+    background-color: #73B925;
+    color: #fff;
+
+    &:hover {
+        background-color: #73B925;
+        color: #fff;
+    }
+}
+
+.join_us_green_btn + button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .join_us_title {
+        font-size: 36px;
+    }
+
+    .join_us_subtitle {
+        font-size: 16px;
+    }
+}
