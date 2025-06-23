@@ -46,9 +46,9 @@
           </p>
         </div>
         <div class="header_info_section_socials hide_mobile" aria-label="Social media links">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
           <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/lokalact/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
         </div>
       </div>
@@ -60,14 +60,13 @@
 
         <nav class="hide_mobile header_nav_section_desktop_nav" role="navigation" aria-label="Main navigation">
           <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="#Home">Home</a></li>
             <li><a href="">About Us</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Our Team</a></li>
-            <li><a href="">Gallery</a></li>
+            <li><a href="#projectShowcase">Projects</a></li>
+            <li><a href="#OurTeam">Our Team</a></li>
           </ul>
           <div id="login-section">
-            <input type="password" id="admin-password" placeholder="Лозинка за администратор" class="hidden" />
+            <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
             <button  onclick="handleLoginClick()" id="login-button">Log In</button>
           </div>
           <button aria-label="Donate to support" class="header_donate_btn">Donate</button>
@@ -82,19 +81,18 @@
           <div class="header_nav_section_mobile_nav_body">
             <div>
               <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="#Home">Home</a></li>
                 <li><a href="">About Us</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Our Team</a></li>
-                <li><a href="">Gallery</a></li>
+                <li><a href="#projectShowcase">Projects</a></li>
+                <li><a href="#OurTeam">Our Team</a></li>
               </ul>
               <button aria-label="Join as a member">Log In</button>
               <button aria-label="Donate to support">Donate</button>
             </div>
             <div class="header_nav_section_mobile_socials" aria-label="Social media links">
-              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
               <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/lokalact/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
               <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
           </div>
@@ -122,7 +120,7 @@
     <button onclick="addCall()" id="publish-call-button">Publish Call</button>
   </section>
   <!--Home Feature-->
-  <section class="home_hero_section">
+  <section id="Home" class="home_hero_section">
     <div class="home_hero_container">
       <h1 class="home_hero_heading">Empowering Communities for Sustainable Development</h1>
       <h3 class="home_hero_subheading">At LOKAL AKT, we believe in fostering collaboration between citizens and local institutions to create a vibrant community. Our mission is to advocate for sustainable practices that enhance the quality of life in Makedonski Brod.</h3>
@@ -203,7 +201,7 @@
     </div>
   </section>
   <!--Our Team Feature-->
-  <section class="our_team">
+  <section id="OurTeam" class="our_team">
     <div class="our_team_container">
       <div class="our_team_header">
         <p class="section_tag">Together</p>
@@ -311,21 +309,21 @@
   <section class="testimonial_section">
     <div class="testimonial_slide testimonial_slide_active">
       <div>
-        <h3 class="testimonial_quote">"LOKarstarstrstrastAL AKT has transformed our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
+        <h3 class="testimonial_quote">"LOKAL AKT has transformed our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
         <div class="testimonial_avatar"></div>
         <h4 class="testimonial_name">Anakin Skywalker</h4>
         <h4 class="testimonial_role">Community Leader, NGO</h4>
       </div>
     </div>    <div class="testimonial_slide ">
       <div>
-        <h3 class="testimonial_quote">" AKT has transformed our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
+        <h3 class="testimonial_quote">"AKT has transformed our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
         <div class="testimonial_avatar"></div>
         <h4 class="testimonial_name">Ron</h4>
         <h4 class="testimonial_role">Community Leader, NGO</h4>
       </div>
     </div>    <div class="testimonial_slide ">
       <div>
-        <h3 class="testimonial_quote">"    our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
+        <h3 class="testimonial_quote">"Our community through its dedication to sustainable development and local engagement. Their initiatives have truly made a difference in Makedonski Brod."</h3>
         <div class="testimonial_avatar"></div>
         <h4 class="testimonial_name">Bojan</h4>
         <h4 class="testimonial_role">Community Leader, NGO</h4>
@@ -422,7 +420,7 @@
     <p class="faq_subtitle">Find quick answers to your most pressing questions about our organization and initiatives.</p>
 
     <div class="faq_container">
-      <details open>
+      <details>
         <summary class="faq_accordion_heading">What is LOKAL AKT?</summary>
         <p>LOKAL AKT is a non-profit organization dedicated to promoting sustainable local development. We focus on
           fostering cooperation between local institutions and citizens. Our goal is to enhance the quality of life in
