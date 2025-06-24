@@ -6,6 +6,7 @@
     align-items: center;
     width: min(1440px, 90%);
     margin: 0 auto;
+    justify-content: space-evenly;
 }
 
 .mission_vision_text {
