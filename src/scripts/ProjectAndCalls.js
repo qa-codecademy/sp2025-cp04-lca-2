@@ -13,12 +13,12 @@ const ADMIN_PASSWORD = "admin123"; // лозинка за пристап
       const loginButton = document.getElementById('login-button');
       if (loginStep === 0) {
         passwordField.classList.remove('hidden');
-        loginButton.textContent = 'Потврди';
+        loginButton.textContent = 'Confirm';
         loginStep = 1;
       } else {
         loginAdmin();
         loginStep = 0;
-        loginButton.textContent = 'Најава';
+        loginButton.textContent = 'Log In';
       }
     }
 
@@ -32,7 +32,7 @@ const ADMIN_PASSWORD = "admin123"; // лозинка за пристап
         renderProjects();
         renderCalls();
       } else {
-        alert('Неточна лозинка');
+        alert('Wrong Password');
       }
     }
 
@@ -43,7 +43,7 @@ const ADMIN_PASSWORD = "admin123"; // лозинка за пристап
       document.getElementById('login-section').classList.remove('hidden');
       document.getElementById('admin-password').value = '';
       document.getElementById('admin-password').classList.add('hidden');
-      document.getElementById('login-button').textContent = 'Најава';
+      document.getElementById('login-button').textContent = 'Log In';
       renderProjects();
       renderCalls();
     }
