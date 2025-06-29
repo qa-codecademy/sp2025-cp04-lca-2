@@ -68,6 +68,7 @@
     }
 
     & span {
+        text-decoration: none;
         color: #73B925;
         cursor: pointer;
 
@@ -77,6 +78,7 @@
         }
     }
 }
+
 
 @media (max-width: 1024px) {
     .empowering_communities_container {

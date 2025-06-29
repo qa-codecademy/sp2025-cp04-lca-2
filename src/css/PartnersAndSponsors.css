@@ -36,7 +36,7 @@
   }
 
   .partners_grid_item {
-    background-color: #f0f0f0;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +46,8 @@
 
   .partner_logo {
     object-fit: cover;
+    max-width: 250px;
+    background-color: white;
   }
 
   @media (max-width: 768px) {
