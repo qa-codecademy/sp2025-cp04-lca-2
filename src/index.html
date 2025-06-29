@@ -30,6 +30,8 @@
 </head>
 
 <body>
+  <!--EN Version-->
+  <div id="lang-en" class="lang-text active">
   <!-- Header Feature -->
   <header class="header">
     <div class="header_info_section">
@@ -45,6 +47,10 @@
             <span class="sr-only">Phone:</span>
             <a>+389 71 234 567</a>
           </p>
+          <div id="language-buttons">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-btn" onclick="setLanguage('en')">
+            <img src="https://flagcdn.com/w40/mk.png" alt="Македонски" class="flag-btn" onclick="setLanguage('mk')">
+          </div>
         </div>
         <div class="header_info_section_socials hide_mobile" aria-label="Social media links">
           <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
@@ -91,6 +97,10 @@
               </ul>
               <button aria-label="Join as a member">Log In</button>
               <button aria-label="Donate to support">Donate</button>
+            </div>
+            <div id="language-buttons">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-btn" onclick="setLanguage('en')">
+              <img src="https://flagcdn.com/w40/mk.png" alt="Македонски" class="flag-btn" onclick="setLanguage('mk')">
             </div>
             <div class="header_nav_section_mobile_socials" aria-label="Social media links">
               <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -546,9 +556,517 @@
         </div>
       </div>
     </div>
+  
   </footer>
+  </div>
+  <!--MK Version-->
+  <!--Navbar mk-->
+  <div id="lang-mk" class="lang-text">
+    <header class="header">
+      <div class="header_info_section">
+        <div class="header_info_section_container">
+          <div class="header_info_section_contact">
+            <p>
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span class="sr-only">Емаил:</span>
+              <a>info@gmail.com</a>
+            </p>
+            <p>
+              <img src="images/Header_Phone_Icon.svg" alt="Phone icon" aria-hidden="true">
+              <span class="sr-only">Телефонски Број:</span>
+              <a>+389 71 234 567</a>
+            </p>
+            <div id="language-buttons">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-btn" onclick="setLanguage('en')">
+              <img src="https://flagcdn.com/w40/mk.png" alt="Македонски" class="flag-btn" onclick="setLanguage('mk')">
+            </div>
+          </div>
+          <div class="header_info_section_socials hide_mobile" aria-label="Social media links">
+            <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/lokalact/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="header_nav_section">
+        <div class="header_nav_section_container">
+          <img src="images/Header_Logo_Icon.svg" alt="Local Act Logo">
+  
+          <nav class="hide_mobile header_nav_section_desktop_nav" role="navigation" aria-label="Main navigation">
+            <ul>
+              <li><a href="#Home">Почетна</a></li>
+              <li><a href="#AboutUs">За Нас</a></li>
+              <li><a href="#projectShowcase">Проекти</a></li>
+              <li><a href="#OurTeam">Нашиот Тим</a></li>
+            </ul>
+            <div id="login-section">
+              <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
+              <button  onclick="handleLoginClick()" id="login-button">Логирај Се</button>
+            </div>
+            <a href="https://www.gofundme.com/" target="_blank">
+            <button aria-label="Donate to support" class="header_donate_btn">Донирај</button>
+            </a>
+          </nav>
+          <i class="fa-solid fa-bars header_nav_section_burger" id="burger-icon" aria-label="Open mobile menu"></i>
+          <div class="hide_desktop header_nav_section_mobile_nav" role="navigation" aria-label="Mobile navigation">
+            <div class="header_nav_section_mobile_nav_header">
+              <img src="images/Header_Logo_Icon.svg" alt="Local Act Logo">
+              <i aria-label="Close mobile menu" class="fa-solid fa-xmark" id="cross-icon"></i>
+            </div>
+  
+            <div class="header_nav_section_mobile_nav_body">
+              <div>
+                <ul>
+                  <li><a href="#Home">Почетна</a></li>
+                  <li><a href="#AboutUs">За Нас</a></li>
+                  <li><a href="#projectShowcase">Проекти</a></li>
+                  <li><a href="#OurTeam">Нашиот Тим</a></li>
+                </ul>
+                <button aria-label="Join as a member">Логирај Се</button>
+                <button aria-label="Donate to support">Донирај</button>
+              </div>
+              <div id="language-buttons">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-btn" onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/w40/mk.png" alt="Македонски" class="flag-btn" onclick="setLanguage('mk')">
+              </div>
+              <div class="header_nav_section_mobile_socials" aria-label="Social media links">
+                <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/lokalact/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+     <!--Admin Feature-->
+  <section id="admin-panel" class="hidden">
+    <button onclick="logoutAdmin()" id="logout-button">Log Out</button>
+
+    <h2>Add Project</h2>
+    <input type="text" id="project-title" placeholder="Наслов на проектот">
+    <textarea id="project-description" placeholder="Опис на проектот"></textarea>
+    <select id="project-status">
+      <option value="current">Current</option>
+      <option value="completed">Completed</option>
+    </select>
+    <input type="file" id="project-images" multiple>
+    <button onclick="addProject()" id="add-project-button">Add Project</button>
+
+    <h2>Public Calls</h2>
+    <textarea id="call-text" placeholder="Внеси текст за јавниот повик"></textarea>
+    <input type="file" id="call-image">
+    <button onclick="addCall()" id="publish-call-button">Publish Call</button>
+  </section>
+  <!--Home Feature MK-->
+  <section id="Home" class="home_hero_section">
+    <div class="home_hero_container">
+      <h1 class="home_hero_heading">Зајакнување на заедниците за одржлив развој</h1>
+      <h3 class="home_hero_subheading">Во ЛОКАЛ АКТ веруваме во поттикнување на соработката меѓу граѓаните и локалните институции со цел создавање на жива и активна заедница. Нашата мисија е да се залагаме за одржливи практики кои го подобруваат квалитетот на живот во Македонски Брод.</h3>
+      <div class="home_hero_btn_group">
+        <button>Учлени се</button>
+        <a href="#AboutUs">
+        <button>Дознај Повеке</button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--  Mission and Vision Section МК-->
+  <section id="OurMission" class="mission_vision">
+    <div class="mission_vision_text">
+      <h1>Нашата Мисија и Визија</h1>
+      <p>Во ЛОКАЛ АКТ се залагаме за одржливи практики што го унапредуваат благосостојбата на заедницата. Нашите иницијативи поттикнуваат соработка помеѓу граѓаните и локалните институции, создавајќи позитивни промени во Македонски Брод.</p>
+    </div>
+    <div class="mission_vision_image">
+      <img src="images/mission_and_vision.jpg" alt="mission and vision image" class="default-image-shadow">
+    </div>
+  </section>
+  <!--  Empowering Communities for Sustainable Development Section МК-->
+  <section class="empowering_communities">
+    <div class="empowering_communities_width_container">
+      <h1 class="empowering_communities_title">
+        Зајакнување на заедниците за одржлив локален развој и заштита на животната средина
+      </h1>
+      <div class="empowering_communities_container">
+        <div class="empowering_communities_card">
+          <img src="images/empowering_section_image_1.jpg" alt="empowering communities image 1" class="default-image-shadow">
+          <h3>Поттикнување на младински активизам и социјална инклузија во Македонски Брод</h3>
+          <p>Ние обезбедуваме ресурси и поддршка за локални иницијативи што поттикнуваат позитивни промени.</p>
+          <a href="#AboutUs" >
+          <span>Дознај повеке <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+        <div class="empowering_communities_card">
+        <img src="images/empowering_section_image_2.jpg" alt="empowering communities image 1" class="default-image-shadow">
+        <h3>Промовирање на еколошка свест и зачувување на културното наследство</h3>
+        <p>Нашите програми имаат за цел да ја заштитат животната средина, додека ја слават нашата богата културна историја.</p>
+        <span>Учлени се <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+        <div class="empowering_communities_card">
+        <img src="images/empowering_section_image_3.jpg" alt="empowering communities image 1" class="default-image-shadow">
+        <h3>SПоддршка на социјално претприемништво и руралниот туризам за економски раст</h3>
+        <p>Ние ги зајакнуваме локалните претприемачи да создаваат работни места и да ја поттикнуваат локалната економија.</p>
+        <span>Приклучи се<i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!--  Why Choose Us Section МК-->
+  <section class="why_choose_us">
+    <div class="why_choose_us_text">
+      <p class="section_tag">Зајакни</p>
+      <h2 class="why_choose_us_title">Зошто да го изберете ЛОКАЛ АКТ за одржлив развој?</h2>
+      <h3 class="why_choose_us_subtitle">Во ЛОКАЛ АКТ, ние придаваме приоритет на вклучувањето на заедницата и одржливите практики. Нашата посветеност на обезбедување квалитет гарантира дека секоја иницијатива има позитивно влијание врз Македонски Брод.</h3>
+      <div>
+        <div>
+          <h4>Фокус на заедницата</h4>
+          <p>Ние ги премостуваме јазовите помеѓу граѓаните и локалните власти за ефективна соработка.</p>
+        </div>
+        <div>
+          <h4>Иницијативи за квалитет</h4>
+          <p>Нашите проекти се дизајнирани да поттикнат трајни промени и подобрување на заедницата.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why_choose_us_images">
+      <img src='images/why3.jpg' alt="why us image 2">
+    </div>
+  </section>
+   <!--Join Us part 1 Feature МК-->
+   <section class="join_us">
+    <div class="join_us_container">
+      <h2 class="join_us_title">Приклучи се со нас во создавањето промени</h2>
+      <p class="join_us_subtitle">Откриј како можеш да придонесеш за одржлив развој и вклучување на заедницата. <br/> in Makedonski Brod.</p>
+      <div class="join_us_btn_group">
+        <button class="green-btn join_us_green_btn">Дознај повеке</button>
+        <button>Придружи нам се<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+  <!--About Us Feature-->
+  <section id="AboutUs">
+    <div id="AboutUsDiv">
+    <h2 id="AboutUsHeading">Нешто за Нас</h2>
+    <p id="AboutUsParagraph">ЛОКАЛ АКТ е една од најактивните организации на граѓанското општество во Општина Македонски Брод. Ние сме невладина, непрофитна организација посветена на одржлив локален и рурален развој. Неколку од нашите иницијативи гордо ги поддржува Европската Унија. Нашата мисија е да го подобриме квалитетот на животот во руралните подрачја преку охрабрување на учеството на граѓаните, зајакнување на локалната соработка и промовирање на еколошката одговорност. Стремиме да обезбедиме чиста и здрава животна средина за сите жители, да ја зголемиме локалната популација и да ја направиме нашата заедница подобро место за живеење. Работиме тесно со граѓаните, институциите и партнерите за справување со клучните предизвици — особено оние поврзани со климатските промени. Еден од нашите тековни проекти се фокусира на зголемување на отпорноста на локалната заедница кон еколошките ризици, особено зголемените закани од шумски пожари и лизгања на земјиште по течението на реката Треска.</p>
+    </div>
+    <div id="AboutUsImgDiv">
+      <img src="images/LocalActLogoAboutUs.jpg" alt="Local ACT Logo" id="AboutUsImg">
+    </div>
+  </section>
+  <!--Our Team Feature МК-->
+  <section id="OurTeam" class="our_team">
+    <div class="our_team_container">
+      <div class="our_team_header">
+        <p class="section_tag">Заедно</p>
+        <h2>Нашиот Тим</h2>
+        <p>Запознајте ги страствените личности кои ја движат нашата мисија напред.</p>
+      </div>
+      <div class="our_team_grid">
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Бојан Стојанов</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Рон Рушеми</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Виктор Гозапрев</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Илија Митев</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Ели Перуновска</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Влатко Стоименов</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Влатко Темелков</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="our_team_card">
+          <div class="our_team_avatar"></div>
+          <h3 class="our_team_name">Лина Атанасова</h3>
+          <p class="our_team_role">Координатор</p>
+          <p class="our_team_bio">Зајакнување на младите преку активизам и образование за посвежа иднина.</p>
+          <div class="our_team_social_icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="our_team_footer">
+          <h2>Вработуваме!</h2>
+          <p>Откриј како можеш да придонесеш во нашата мисија.</p>
+          <button class="green-btn our_team_footer_green_btn" >Отворени Позиции <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+   <!--Testimonial Feature-->
+   <section class="testimonial_section">
+    <div class="testimonial_slide testimonial_slide_active">
+      <div>
+        <h3 class="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
+        <div class="testimonial_avatar"></div>
+        <h4 class="testimonial_name">Виктор</h4>
+        <h4 class="testimonial_role">Лидер на заедницата, НВО</h4>
+      </div>
+    </div>    <div class="testimonial_slide ">
+      <div>
+        <h3 class="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
+        <div class="testimonial_avatar"></div>
+        <h4 class="testimonial_name">Рон</h4>
+        <h4 class="testimonial_role">Лидер на заедницата, НВО</h4>
+      </div>
+    </div>    <div class="testimonial_slide ">
+      <div>
+        <h3 class="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
+        <div class="testimonial_avatar"></div>
+        <h4 class="testimonial_name">Бојан</h4>
+        <h4 class="testimonial_role">Лидер на заедницата, НВО</h4>
+      </div>
+    </div>
+
+
+
+    <button class="testimonial_prev_btn" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="testimonial_next_btn" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
+
+    <div class="testimonial_dots" id="dots"></div>
+  </section>
+   <!--Impact Feature МК-->
+   <section class="impact_section">
+    <div class="impact_container">
+      <div class="impact_text">
+        <div class="impact_heading">Прославувајќи го нашиот импакт: Заеднички ги трансформираме животите и заедниците.</div>
+        <div class="impact_subtitle">
+          Во ЛОКАЛ АКТ, горди сме што позитивно влијаевме врз нашата заедница преку различни иницијативи. Нашата посветеност на одржливиот развој и социјалната инклузија доведе до значајни промени во Македонски Брод.
+        </div>
+        <div class="impact_stats">
+          <div class="impact_stat">
+            <div class="impact_stat_value">75%</div>
+            <div class="impact_stat_desc">млади вклучени во нашите програми.</div>
+          </div>
+          <div class="impact_stat">
+            <div class="impact_stat_value">100%</div>
+            <div class="impact_stat_desc">посветеност на иницијативи за заштита на животната средина.</div>
+          </div>
+        </div>
+      </div>
+      <div class="impact_image_container">
+        <img src="images/impact-image.jpg" alt="Impact Image" class="impact_image default-image-shadow">
+      </div>
+    </div>
+  </section>
+   <!--Partners and Sponsors Feature-->
+   <section class="partners_section">
+    <h2>Нашите Партнери и Спонзори</h2>
+    <p class="partners_quote">Голема благодароност до нашите Партнери и Спознори</p>
+
+    <div class="partners_grid">
+      <div class="partners_grid_item">
+        <a href="https://rcgo.mk/" target="_blank">
+          <img src="images/123.png" alt="Gragjanski resursen centar logo" class="partner_logo">
+        </a>
+      </div>
+      <div class="partners_grid_item">
+        <a href="https://euprojects.mk/" target="_blank">
+        <img src="images/Logoa-Eu-so-tebe-01.png" alt="Eu so tebe logo" class="partner_logo">
+        </a>
+      </div>
+      <div class="partners_grid_item">
+        <a href="https://www.facebook.com/treskaed/?locale=mk_MK" target="_blank">
+        <img src="images/images.jpeg" alt="treska logo" class="partner_logo">
+        </a>
+      </div>
+      <div class="partners_grid_item">
+        <a href="https://avengaacademy.com/" target="_blank">
+        <img src="images/images.png" alt="Avenga Logo" class="partner_logo">
+        </a>
+      </div>
+      <div class="partners_grid_item">
+        <a href="https://avengaacademy.com/" target="_blank">
+        <img src="images/kinshift.png" alt="Qinshift Logo" class="partner_logo">
+        </a>
+      </div>
+      <div class="partners_grid_item">
+        <a href="https://www.wienerberger.mk/" target="_blank">
+        <img src="images/0009534_vinerberger-dooel_450.jpeg" alt="Wienerberger Logo" class="partner_logo">
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--Project Show Case Feature-->
+  <section id="projectShowcase">
+    <h2>Претставување на Проекти</h2>
+    <div id="filter-buttons">
+      <button id="filter-all" onclick="setFilter('all')">Сите</button>
+      <button id="filter-current" onclick="setFilter('current')">Моментални</button>
+      <button id="filter-completed" onclick="setFilter('completed')">Завршени</button>
+    </div>
+    <div id="project-list"></div>
+    </section>
+    <!-- Public Calls Feature -->
+  <section id="publicCalls">
+    <h2>Јавни Повици</h2>
+    <div id="call-list"></div>
+  
+    <!-- Viewer за слики во голем приказ -->
+    <div id="image-viewer" class="hidden">
+      <button class="close-button" onclick="closeImageViewer(event)">&times;</button>
+      <img id="full-image" src="">
+      <div class="nav-buttons">
+        <button onclick="prevImage(event)">&laquo; Претходна</button>
+        <button onclick="nextImage(event)">Следна &raquo;</button>
+      </div>
+    </div>
+    </section>
+    <script src="ProjectAndCalls.js"></script>
+    <!--FAQs Feature МК-->
+  <section class="faq_section">
+    <h1>Често поставувани прашања</h1>
+    <p class="faq_subtitle">Пронајди брзи одговори на најчесто поставуваните прашања за нашата организација и иницијативи.</p>
+
+    <div class="faq_container">
+      <details>
+        <summary class="faq_accordion_heading">Што е ЛОКАЛ АКТ?</summary>
+        <p>ЛОКАЛ АКТ е непрофитна организација посветена на промовирање на одржлив локален развој. Се фокусираме на поттикнување соработка помеѓу локалните институции и граѓаните. Нашата цел е да го подобриме квалитетот на живот во Македонски Брод.</p>
+      </details>
+
+      <details>
+        <summary class="faq_accordion_heading">Како можам да помогнам?</summary>
+        <p>Можеш да помогнеш преку волонтирање во нашите проекти или со донирање за поддршка на нашите иницијативи. Секој придонес прави разлика во нашата заедница. Приклучи се и заедно да создадеме позитивно влијание!</p>
+      </details>
+
+      <details >
+        <summary class="faq_accordion_heading">Кои програми ги нудите?</summary>
+        <p>Нудиме програми фокусирани на младински активизам, заштита на животната средина и социјално претприемништво. Нашите иницијативи имаат за цел да ги решаваат локалните предизвици и да го поттикнуваат вклучувањето на заедницата. Истражи ја нашата веб-страница за детални информации за секоја програма.</p>
+      </details>
+
+      <details >
+        <summary class="faq_accordion_heading">Како можам да се вклучам?</summary>
+        <p>Вклучувањето е лесно! Можеш да учествуваш на нашите настани, да волонтираш во проектите или да соработуваш со нас на иницијативите. Погледни го календарот на настани за претстојни можности.</p>
+      </details>
+
+      <details >
+        <summary class="faq_accordion_heading">Каде се наоѓа ЛОКАЛ АКТ?</summary>
+        <p>ЛОКАЛ АКТ е базиран во Македонски Брод, каде активно се вклучуваме во локалната заедница. Нашата канцеларија е отворена за јавноста за прашања и соработка. Посети нè за да дознаеш повеќе за нашата работа.</p>
+      </details>
+    </div>
+
+    <div class="faq_contact_container">
+      <h2>Сеуште имаш прашања?</h2>
+      <p>Тука сме за да ти помогнеме!</p>
+      <button class="green-btn faq_contact_btn">Контакт</button>
+    </div>
+  </section>
+  <!--  Footer Section-->
+  <footer>
+    <div class="footer_container">
+      <img src="images/Footer_logo.png" alt="footer logo">
+      <div class="footer_links">
+        <a href="#">Вклучи се</a>
+        <a href="#OurMission">Нашата Мисија</a>
+        <a href="#">Контактирај не</a>
+        <a href="#">Волонтирај Денеска</a>
+        <a href="https://www.gofundme.com/" target="_blank">Донирај сега</a>
+      </div>
+      <div class="footer_info">
+        <div class="footer_info_contact">
+          <p>
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span class="sr-only">Емаил:</span>
+            <a>info@gmail.com</a>
+          </p>
+          <p>
+            <img src="images/Header_Phone_Icon.svg" alt="Phone icon" aria-hidden="true">
+            <span class="sr-only">Телефон:</span>
+            <a>+389 71 234 567</a>
+          </p>
+        </div>
+        <div class="footer_info_socials">
+            <a href="https://www.facebook.com/LocalActMbrod/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/lokalact/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="footer_policy">
+        <p>© 2025 ЛОКАЛ АКТ. Сите Права се резервирани.</p>
+        <div>
+          <a href="#">Политика на приватност</a>
+          <a href="#">Правила за користење</a>
+          <a href="#">Политика за колачиња</a>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+  </div>
+
 
   <!--Scripts-->
+  <script src="scripts/lang.js"></script>
   <script src="scripts/TestemonialsSectionCode.js"></script>
   <script src="scripts/Header.js" defer></script>
   <script src="scripts/ProjectAndCalls.js"></script>
