@@ -65,3 +65,70 @@
         }
     }
 }
+#AboutUsMk{
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1440px, 90%);
+    margin: 0 auto;
+}
+
+#AboutUsHeadingMk{
+    color: rgba(0,0,0,0.8);
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 12px;
+}
+#AboutUsParagraphMk{
+    color: #8C8C8C;
+    margin-top: 24px;
+    line-height: 1.4em;
+    text-wrap: balance;
+    font-size: 18px;
+    padding-right: 20px;
+}
+#AboutUsImgMk{
+    width: 666px;
+    height: 512px;
+    object-fit: cover;
+    border-radius: 5px !important;
+}
+
+@media (max-width: 1024px) {
+    #AboutUsMk {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #AboutUsDivMk {
+        width: 100%;
+    }
+
+    #AboutUsImgMk {
+        width: 100%;
+        height: 412px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #AboutUsMk {
+        padding: 64px 0 ;
+    }
+
+    #AboutUsDivMk {
+        & h1 {
+            font-size: 42px;
+        }
+
+        & p {
+            font-size: 16px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
+}

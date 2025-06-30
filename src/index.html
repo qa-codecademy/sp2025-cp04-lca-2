@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Local ACT</title>
   <!--Font Inter-->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Icons -->
@@ -226,7 +226,7 @@
       We work closely with citizens, institutions, and partners to address key challenges—especially those related to climate change. One of our current projects focuses on increasing the resilience of the local community to environmental risks, particularly the rising threats of forest fires and landslides along the Treska River.</p>
     </div>
     <div id="AboutUsImgDiv">
-      <img src="images/LocalActLogoAboutUs.jpg" alt="Local ACT Logo" id="AboutUsImg">
+      <img src="images/Original logo.png" alt="Local ACT Logo" id="AboutUsImg">
     </div>
   </section>
   <!--Our Team Feature-->
@@ -449,8 +449,8 @@
       <button class="close-button" onclick="closeImageViewer(event)">&times;</button>
       <img id="full-image" src="">
       <div class="nav-buttons">
-        <button onclick="prevImage(event)">&laquo; Претходна</button>
-        <button onclick="nextImage(event)">Следна &raquo;</button>
+        <button onclick="prevImage(event)">&laquo; Previous</button>
+        <button onclick="nextImage(event)">Next &raquo;</button>
       </div>
     </div>
     </section>
@@ -596,10 +596,10 @@
   
           <nav class="hide_mobile header_nav_section_desktop_nav" role="navigation" aria-label="Main navigation">
             <ul>
-              <li><a href="#Home">Почетна</a></li>
-              <li><a href="#AboutUs">За Нас</a></li>
-              <li><a href="#projectShowcase">Проекти</a></li>
-              <li><a href="#OurTeam">Нашиот Тим</a></li>
+              <li><a href="#HomeMk">Почетна</a></li>
+              <li><a href="#AboutUsMk">За Нас</a></li>
+              <li><a href="#projectShowcaseMk">Проекти</a></li>
+              <li><a href="#OurTeamMk">Нашиот Тим</a></li>
             </ul>
             <div id="login-section">
               <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
@@ -619,10 +619,10 @@
             <div class="header_nav_section_mobile_nav_body">
               <div>
                 <ul>
-                  <li><a href="#Home">Почетна</a></li>
-                  <li><a href="#AboutUs">За Нас</a></li>
-                  <li><a href="#projectShowcase">Проекти</a></li>
-                  <li><a href="#OurTeam">Нашиот Тим</a></li>
+                  <li><a href="#HomeMk">Почетна</a></li>
+                  <li><a href="#AboutUsMk">За Нас</a></li>
+                  <li><a href="#projectShowcaseMk">Проекти</a></li>
+                  <li><a href="#OurTeamMK">Нашиот Тим</a></li>
                 </ul>
                 <button aria-label="Join as a member">Логирај Се</button>
                 <button aria-label="Donate to support">Донирај</button>
@@ -644,14 +644,14 @@
     </header>
      <!--Admin Feature-->
   <section id="admin-panel" class="hidden">
-    <button onclick="logoutAdmin()" id="logout-button">Log Out</button>
+    <button onclick="logoutAdmin()" id="logout-button">Одлогирај се</button>
 
     <h2>Add Project</h2>
     <input type="text" id="project-title" placeholder="Наслов на проектот">
     <textarea id="project-description" placeholder="Опис на проектот"></textarea>
     <select id="project-status">
-      <option value="current">Current</option>
-      <option value="completed">Completed</option>
+      <option value="current">Моментален</option>
+      <option value="completed">Завршен</option>
     </select>
     <input type="file" id="project-images" multiple>
     <button onclick="addProject()" id="add-project-button">Add Project</button>
@@ -662,20 +662,20 @@
     <button onclick="addCall()" id="publish-call-button">Publish Call</button>
   </section>
   <!--Home Feature MK-->
-  <section id="Home" class="home_hero_section">
+  <section id="HomeMk" class="home_hero_section">
     <div class="home_hero_container">
       <h1 class="home_hero_heading">Зајакнување на заедниците за одржлив развој</h1>
       <h3 class="home_hero_subheading">Во ЛОКАЛ АКТ веруваме во поттикнување на соработката меѓу граѓаните и локалните институции со цел создавање на жива и активна заедница. Нашата мисија е да се залагаме за одржливи практики кои го подобруваат квалитетот на живот во Македонски Брод.</h3>
       <div class="home_hero_btn_group">
         <button>Учлени се</button>
-        <a href="#AboutUs">
+        <a href="#AboutUsMk">
         <button>Дознај Повеке</button>
         </a>
       </div>
     </div>
   </section>
   <!--  Mission and Vision Section МК-->
-  <section id="OurMission" class="mission_vision">
+  <section id="OurMissionMk" class="mission_vision">
     <div class="mission_vision_text">
       <h1>Нашата Мисија и Визија</h1>
       <p>Во ЛОКАЛ АКТ се залагаме за одржливи практики што го унапредуваат благосостојбата на заедницата. Нашите иницијативи поттикнуваат соработка помеѓу граѓаните и локалните институции, создавајќи позитивни промени во Македонски Брод.</p>
@@ -695,7 +695,7 @@
           <img src="images/empowering_section_image_1.jpg" alt="empowering communities image 1" class="default-image-shadow">
           <h3>Поттикнување на младински активизам и социјална инклузија во Македонски Брод</h3>
           <p>Ние обезбедуваме ресурси и поддршка за локални иницијативи што поттикнуваат позитивни промени.</p>
-          <a href="#AboutUs" >
+          <a href="#AboutUsMk" >
           <span>Дознај повеке <i class="fa-solid fa-arrow-right"></i></span>
           </a>
         </div>
@@ -747,17 +747,17 @@
     </div>
   </section>
   <!--About Us Feature-->
-  <section id="AboutUs">
-    <div id="AboutUsDiv">
-    <h2 id="AboutUsHeading">Нешто за Нас</h2>
-    <p id="AboutUsParagraph">ЛОКАЛ АКТ е една од најактивните организации на граѓанското општество во Општина Македонски Брод. Ние сме невладина, непрофитна организација посветена на одржлив локален и рурален развој. Неколку од нашите иницијативи гордо ги поддржува Европската Унија. Нашата мисија е да го подобриме квалитетот на животот во руралните подрачја преку охрабрување на учеството на граѓаните, зајакнување на локалната соработка и промовирање на еколошката одговорност. Стремиме да обезбедиме чиста и здрава животна средина за сите жители, да ја зголемиме локалната популација и да ја направиме нашата заедница подобро место за живеење. Работиме тесно со граѓаните, институциите и партнерите за справување со клучните предизвици — особено оние поврзани со климатските промени. Еден од нашите тековни проекти се фокусира на зголемување на отпорноста на локалната заедница кон еколошките ризици, особено зголемените закани од шумски пожари и лизгања на земјиште по течението на реката Треска.</p>
+  <section id="AboutUsMk">
+    <div id="AboutUsDivMk">
+    <h2 id="AboutUsHeadingMk">Нешто за Нас</h2>
+    <p id="AboutUsParagraphMk">ЛОКАЛ АКТ е една од најактивните организации на граѓанското општество во Општина Македонски Брод. Ние сме невладина, непрофитна организација посветена на одржлив локален и рурален развој. Неколку од нашите иницијативи гордо ги поддржува Европската Унија. Нашата мисија е да го подобриме квалитетот на животот во руралните подрачја преку охрабрување на учеството на граѓаните, зајакнување на локалната соработка и промовирање на еколошката одговорност. Стремиме да обезбедиме чиста и здрава животна средина за сите жители, да ја зголемиме локалната популација и да ја направиме нашата заедница подобро место за живеење. Работиме тесно со граѓаните, институциите и партнерите за справување со клучните предизвици — особено оние поврзани со климатските промени. Еден од нашите тековни проекти се фокусира на зголемување на отпорноста на локалната заедница кон еколошките ризици, особено зголемените закани од шумски пожари и лизгања на земјиште по течението на реката Треска.</p>
     </div>
-    <div id="AboutUsImgDiv">
-      <img src="images/LocalActLogoAboutUs.jpg" alt="Local ACT Logo" id="AboutUsImg">
+    <div id="AboutUsImgDivMk">
+      <img src="images/Original logo.png" alt="Local ACT Logo" id="AboutUsImgMk">
     </div>
   </section>
   <!--Our Team Feature МК-->
-  <section id="OurTeam" class="our_team">
+  <section id="OurTeamMk" class="our_team">
     <div class="our_team_container">
       <div class="our_team_header">
         <p class="section_tag">Заедно</p>
@@ -862,34 +862,34 @@
     </div>
   </section>
    <!--Testimonial Feature-->
-   <section class="testimonial_section">
-    <div class="testimonial_slide testimonial_slide_active">
+   <section class="testimonial_section" id="testimonial_section">
+    <div class="testimonial_slide testimonial_slide_active" id="testimonial_slide testimonial_slide_active">
       <div>
-        <h3 class="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
-        <div class="testimonial_avatar"></div>
-        <h4 class="testimonial_name">Виктор</h4>
-        <h4 class="testimonial_role">Лидер на заедницата, НВО</h4>
+        <h3 class="testimonial_quote" id="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
+        <div class="testimonial_avatar" id="testimonial_avatar"></div>
+        <h4 class="testimonial_name" id="testimonial_name">Виктор</h4>
+        <h4 class="testimonial_role" id="testimonial_role">Лидер на заедницата, НВО</h4>
       </div>
-    </div>    <div class="testimonial_slide ">
+    </div>    <div class="testimonial_slide " id="testimonial_slide ">
       <div>
-        <h3 class="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
-        <div class="testimonial_avatar"></div>
-        <h4 class="testimonial_name">Рон</h4>
-        <h4 class="testimonial_role">Лидер на заедницата, НВО</h4>
+        <h3 class="testimonial_quote" id="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
+        <div class="testimonial_avatar" id="testimonial_avatar"></div>
+        <h4 class="testimonial_name" id="testimonial_name">Рон</h4>
+        <h4 class="testimonial_role" id="testimonial_role">Лидер на заедницата, НВО</h4>
       </div>
-    </div>    <div class="testimonial_slide ">
+    </div>    <div class="testimonial_slide " id="testimonial_slide">
       <div>
-        <h3 class="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
-        <div class="testimonial_avatar"></div>
-        <h4 class="testimonial_name">Бојан</h4>
-        <h4 class="testimonial_role">Лидер на заедницата, НВО</h4>
+        <h3 class="testimonial_quote" id="testimonial_quote">„ЛОКАЛ АКТ ја трансформираше нашата заедница преку својата посветеност на одржливиот развој и локалното вклучување. Нивните иницијативи навистина направија разлика во Македонски Брод.“</h3>
+        <div class="testimonial_avatar" id="testimonial_avatar"></div>
+        <h4 class="testimonial_name" id="testimonial_name">Бојан</h4>
+        <h4 class="testimonial_role" id="testimonial_role">Лидер на заедницата, НВО</h4>
       </div>
     </div>
 
 
 
-    <button class="testimonial_prev_btn" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-    <button class="testimonial_next_btn" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
+    <button class="testimonial_prev_btn" id="testimonial_prev_btn" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left" id="fa-solid fa-arrow-left"></i></button>
+    <button class="testimonial_next_btn" id="testimonial_next_btn" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right" id="fa-solid fa-arrow-right"></i></button>
 
     <div class="testimonial_dots" id="dots"></div>
   </section>
@@ -956,31 +956,30 @@
     </div>
   </section>
   <!--Project Show Case Feature-->
-  <section id="projectShowcase">
+  <section id="projectShowcaseMk">
     <h2>Претставување на Проекти</h2>
-    <div id="filter-buttons">
-      <button id="filter-all" onclick="setFilter('all')">Сите</button>
+    <div id="filter-buttonsMk">
+      <button id="filter-allMk" onclick="setFilter('all')">Сите</button>
       <button id="filter-current" onclick="setFilter('current')">Моментални</button>
-      <button id="filter-completed" onclick="setFilter('completed')">Завршени</button>
+      <button id="filter-completedMk" onclick="setFilter('completed')">Завршени</button>
     </div>
-    <div id="project-list"></div>
+    <div id="project-list-mk"></div>
     </section>
     <!-- Public Calls Feature -->
-  <section id="publicCalls">
+  <section id="publicCallsMk">
     <h2>Јавни Повици</h2>
-    <div id="call-list"></div>
+    <div id="call-list-mk"></div>
   
     <!-- Viewer за слики во голем приказ -->
     <div id="image-viewer" class="hidden">
-      <button class="close-button" onclick="closeImageViewer(event)">&times;</button>
+      <button class="close-button" onclick="closeImageViewer(event)">×</button>
       <img id="full-image" src="">
-      <div class="nav-buttons">
+      <div class="nav-buttons hidden">
         <button onclick="prevImage(event)">&laquo; Претходна</button>
         <button onclick="nextImage(event)">Следна &raquo;</button>
       </div>
     </div>
-    </section>
-    <script src="ProjectAndCalls.js"></script>
+    
     <!--FAQs Feature МК-->
   <section class="faq_section">
     <h1>Често поставувани прашања</h1>
@@ -1025,7 +1024,7 @@
       <img src="images/Footer_logo.png" alt="footer logo">
       <div class="footer_links">
         <a href="#">Вклучи се</a>
-        <a href="#OurMission">Нашата Мисија</a>
+        <a href="#OurMissionMk">Нашата Мисија</a>
         <a href="#">Контактирај не</a>
         <a href="#">Волонтирај Денеска</a>
         <a href="https://www.gofundme.com/" target="_blank">Донирај сега</a>
@@ -1060,16 +1059,17 @@
         </div>
       </div>
     </div>
-  
+    
   </footer>
   </div>
 
 
   <!--Scripts-->
-  <script src="scripts/lang.js"></script>
+ 
+  <script src="scripts/Header.js"></script>
+  <script src="scripts/ProjectAndCalls.js" defer></script>
   <script src="scripts/TestemonialsSectionCode.js"></script>
-  <script src="scripts/Header.js" defer></script>
-  <script src="scripts/ProjectAndCalls.js"></script>
+  <script src="scripts/lang.js"></script>
 </body>
 
 </html>
