@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="css/JoinUs.css">
   <link rel="stylesheet" href="css/JoinUsFooter.css">
   <link rel="stylesheet" href="css/AboutUs.css">
+  <link rel="stylesheet" href="css/adminPanelMk.css">
+  <link rel="stylesheet" href="css/adminPanelEn.css">
 </head>
 
 <body>
@@ -95,7 +97,10 @@
                 <li><a href="#projectShowcase">Projects</a></li>
                 <li><a href="#OurTeam">Our Team</a></li>
               </ul>
-              <button aria-label="Join as a member">Log In</button>
+              <div id="login-section">
+                <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
+                <button  onclick="handleLoginClick()" id="login-button">Log In</button>
+              </div>
               <button aria-label="Donate to support">Donate</button>
             </div>
             <div id="language-buttons">
@@ -602,8 +607,9 @@
               <li><a href="#OurTeamMk">Нашиот Тим</a></li>
             </ul>
             <div id="login-section">
-              <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
-              <button  onclick="handleLoginClick()" id="login-button">Логирај Се</button>
+              <input type="password" id="admin-password-mk" placeholder="Admin Password" class="hidden" />
+              <button onclick="handleLoginClick('mk')" id="login-button-mk">Логирај Се</button>
+              
             </div>
             <a href="https://www.gofundme.com/" target="_blank">
             <button aria-label="Donate to support" class="header_donate_btn">Донирај</button>
@@ -624,7 +630,9 @@
                   <li><a href="#projectShowcaseMk">Проекти</a></li>
                   <li><a href="#OurTeamMK">Нашиот Тим</a></li>
                 </ul>
-                <button aria-label="Join as a member">Логирај Се</button>
+                <input type="password" id="admin-password-mk" placeholder="Admin Password" class="hidden" />
+<button onclick="handleLoginClick('mk')" id="login-button-mk">Логирај Се</button>
+
                 <button aria-label="Donate to support">Донирај</button>
               </div>
               <div id="language-buttons">
@@ -643,8 +651,10 @@
       </div>
     </header>
      <!--Admin Feature-->
-  <section id="admin-panel" class="hidden">
-    <button onclick="logoutAdmin()" id="logout-button">Одлогирај се</button>
+     <section id="admin-panel-mk" class="hidden">
+
+      <button onclick="logoutAdmin('mk')" id="logout-button">Одлогирај се</button>
+
 
     <h2>Add Project</h2>
     <input type="text" id="project-title" placeholder="Наслов на проектот">
@@ -654,12 +664,12 @@
       <option value="completed">Завршен</option>
     </select>
     <input type="file" id="project-images" multiple>
-    <button onclick="addProject()" id="add-project-button">Add Project</button>
+    <button onclick="addProject()" id="add-project-button">Додај Проект</button>
 
     <h2>Public Calls</h2>
     <textarea id="call-text" placeholder="Внеси текст за јавниот повик"></textarea>
     <input type="file" id="call-image">
-    <button onclick="addCall()" id="publish-call-button">Publish Call</button>
+    <button onclick="addCall()" id="publish-call-button">Објави Повик</button>
   </section>
   <!--Home Feature MK-->
   <section id="HomeMk" class="home_hero_section">

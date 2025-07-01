@@ -1,5 +1,3 @@
-// ✅ ProjectAndCalls.js со поддршка за EN и MK јазик
-
 const ADMIN_PASSWORD = "admin123";
 let projects = JSON.parse(localStorage.getItem('projects') || '[]');
 let calls = JSON.parse(localStorage.getItem('calls') || '[]');
@@ -9,40 +7,64 @@ let loginStep = 0;
 let currentGalleryImages = [];
 let currentImageIndex = 0;
 
-function handleLoginClick() {
-  const passwordField = document.getElementById('admin-password');
-  const loginButton = document.getElementById('login-button');
+function handleLoginClick(language = 'en') {
+  const passwordField = document.getElementById(
+    language === 'mk' ? 'admin-password-mk' : 'admin-password'
+  );
+  const loginButton = document.getElementById(
+    language === 'mk' ? 'login-button-mk' : 'login-button'
+  );
+
   if (loginStep === 0) {
     passwordField.classList.remove('hidden');
-    loginButton.textContent = 'Confirm';
+    loginButton.textContent = language === 'mk' ? 'Потврди' : 'Confirm';
     loginStep = 1;
   } else {
-    loginAdmin();
+    loginAdmin(language);
     loginStep = 0;
-    loginButton.textContent = 'Log In';
+    loginButton.textContent = language === 'mk' ? 'Логирај Се' : 'Log In';
   }
 }
 
-function loginAdmin() {
-  const password = document.getElementById('admin-password').value;
+function loginAdmin(language = 'en') {
+  const password = document.getElementById(
+    language === 'mk' ? 'admin-password-mk' : 'admin-password'
+  ).value;
+
+  const panel = document.getElementById(
+    language === 'mk' ? 'admin-panel-mk' : 'admin-panel'
+  );
+
+  const loginSection = document.getElementById('login-section');
+
   if (password === ADMIN_PASSWORD) {
     isAdmin = true;
-    document.getElementById('admin-panel').classList.remove('hidden');
-    document.getElementById('login-section').classList.add('hidden');
+    panel.classList.remove('hidden');
+    loginSection.classList.add('hidden');
     renderProjects();
     renderCalls();
   } else {
-    alert('Wrong Password');
+    alert(language === 'mk' ? 'Неточна лозинка' : 'Wrong Password');
   }
 }
 
-function logoutAdmin() {
+function logoutAdmin(language = 'en') {
   isAdmin = false;
-  document.getElementById('admin-panel').classList.add('hidden');
+  const panel = document.getElementById(
+    language === 'mk' ? 'admin-panel-mk' : 'admin-panel'
+  );
+  const passwordInput = document.getElementById(
+    language === 'mk' ? 'admin-password-mk' : 'admin-password'
+  );
+  const loginButton = document.getElementById(
+    language === 'mk' ? 'login-button-mk' : 'login-button'
+  );
+
+  panel.classList.add('hidden');
   document.getElementById('login-section').classList.remove('hidden');
-  document.getElementById('admin-password').value = '';
-  document.getElementById('admin-password').classList.add('hidden');
-  document.getElementById('login-button').textContent = 'Log In';
+  passwordInput.value = '';
+  passwordInput.classList.add('hidden');
+  loginButton.textContent = language === 'mk' ? 'Логирај Се' : 'Log In';
   renderProjects();
   renderCalls();
 }
