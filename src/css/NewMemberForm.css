@@ -1,0 +1,130 @@
+.blur {
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.3s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  /* Става форма централно над позадината */
+#join-form-en,
+#join-form-mk {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Заден темен overlay */
+#form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: none;
+}
+/* Централно позиционирана join форма над blur позадина */
+#join-form-en,
+#join-form-mk {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2001;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 90%;
+  display: block;
+}
+
+/* Позадински overlay (затемнување) */
+#form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+/* Замаглување на главната содржина */
+.blur {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.3s ease;
+}
+
+/* Скриен елемент */
+.hidden {
+  display: none !important;
+}
+.join-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .join-form h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 5px;
+  }
+
+  .join-form label {
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .join-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .join-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+
+  .join-form button:hover {
+    background-color: #45a049;
+  }
+
+  .hidden {
+    display: none;
+  }

@@ -29,9 +29,11 @@
   <link rel="stylesheet" href="css/AboutUs.css">
   <link rel="stylesheet" href="css/adminPanelMk.css">
   <link rel="stylesheet" href="css/adminPanelEn.css">
+  <link rel="stylesheet" href="css/NewMemberForm.css">
 </head>
 
 <body>
+<div id="main-content">
   <!--EN Version-->
   <div id="lang-en" class="lang-text active">
   <!-- Header Feature -->
@@ -143,14 +145,14 @@
       <h1 class="home_hero_heading">Empowering Communities for Sustainable Development</h1>
       <h3 class="home_hero_subheading">At LOKAL AKT, we believe in fostering collaboration between citizens and local institutions to create a vibrant community. Our mission is to advocate for sustainable practices that enhance the quality of life in Makedonski Brod.</h3>
       <div class="home_hero_btn_group">
-        <button>Join</button>
+        <button class="show-join-form-en">Join</button>
         <a href="#AboutUs">
         <button>Learn More</button>
         </a>
       </div>
     </div>
   </section>
-<!--  Mission and Vision Section-->
+  <!--  Mission and Vision Section-->
   <section id="OurMission" class="mission_vision">
     <div class="mission_vision_text">
       <h1>Our Mission & Vision</h1>
@@ -160,7 +162,7 @@
       <img src="images/mission_and_vision.jpg" alt="mission and vision image" class="default-image-shadow">
     </div>
   </section>
-<!--  Empowering Communities for Sustainable Development Section-->
+  <!--  Empowering Communities for Sustainable Development Section-->
   <section class="empowering_communities">
     <div class="empowering_communities_width_container">
       <h1 class="empowering_communities_title">
@@ -179,18 +181,18 @@
         <img src="images/empowering_section_image_2.jpg" alt="empowering communities image 1" class="default-image-shadow">
         <h3>Promoting Environmental Awareness and Cultural Heritage Preservation</h3>
         <p>Our programs aim to protect the environment while celebrating our rich cultural history.</p>
-        <span>Join Us <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="show-join-form-en">Join Us <i class="fa-solid fa-arrow-right"></i></span>
       </div>
         <div class="empowering_communities_card">
         <img src="images/empowering_section_image_3.jpg" alt="empowering communities image 1" class="default-image-shadow">
         <h3>Supporting Social Entrepreneurship and Rural Tourism for Economic Growth</h3>
         <p>We empower local entrepreneurs to create jobs and boost the local economy.</p>
-        <span>Get Involved <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="show-join-form-en">Get Involved <i class="fa-solid fa-arrow-right"></i></span>
       </div>
       </div>
     </div>
   </section>
-<!--  Why Choose Us Section-->
+  <!--  Why Choose Us Section-->
   <section class="why_choose_us">
     <div class="why_choose_us_text">
       <p class="section_tag">Empower</p>
@@ -218,7 +220,7 @@
       <p class="join_us_subtitle">Discover how you can contribute to sustainable development and community engagement <br/> in Makedonski Brod.</p>
       <div class="join_us_btn_group">
         <button class="green-btn join_us_green_btn">Learn More</button>
-        <button>Get Involved <i class="fa-solid fa-arrow-right"></i></button>
+        <button class="show-join-form-en">Get Involved <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
   </section>
@@ -515,17 +517,18 @@
         <p>Be a part of our mission to foster sustainable development and empower our community. Together, we can create a brighter future for Makedonski Brod.</p>
         <div class="join_us_footer_btn_group">
           <button >Learn More</button>
-          <button >Sign Up</button>
+          <button class="show-join-form-en">Sign Up</button>
         </div>
       </div>
     </div>
   </section>
-<!--  Footer Section-->
+
+  <!--  Footer Section-->
   <footer>
     <div class="footer_container">
       <img src="images/Footer_logo.png" alt="footer logo">
       <div class="footer_links">
-        <a href="#">Get Involved</a>
+        <a href="#" class="show-join-form-en">Get Involved</a>
         <a href="#OurMission">Our Mission</a>
         <a href="#">Contact Us</a>
         <a href="#">Volunteer Today</a>
@@ -631,7 +634,7 @@
                   <li><a href="#OurTeamMK">Нашиот Тим</a></li>
                 </ul>
                 <input type="password" id="admin-password-mk" placeholder="Admin Password" class="hidden" />
-<button onclick="handleLoginClick('mk')" id="login-button-mk">Логирај Се</button>
+    <button onclick="handleLoginClick('mk')" id="login-button-mk">Логирај Се</button>
 
                 <button aria-label="Donate to support">Донирај</button>
               </div>
@@ -677,7 +680,7 @@
       <h1 class="home_hero_heading">Зајакнување на заедниците за одржлив развој</h1>
       <h3 class="home_hero_subheading">Во ЛОКАЛ АКТ веруваме во поттикнување на соработката меѓу граѓаните и локалните институции со цел создавање на жива и активна заедница. Нашата мисија е да се залагаме за одржливи практики кои го подобруваат квалитетот на живот во Македонски Брод.</h3>
       <div class="home_hero_btn_group">
-        <button>Учлени се</button>
+        <button class="show-join-form-mk">Учлени се</button>
         <a href="#AboutUsMk">
         <button>Дознај Повеке</button>
         </a>
@@ -713,13 +716,13 @@
         <img src="images/empowering_section_image_2.jpg" alt="empowering communities image 1" class="default-image-shadow">
         <h3>Промовирање на еколошка свест и зачувување на културното наследство</h3>
         <p>Нашите програми имаат за цел да ја заштитат животната средина, додека ја слават нашата богата културна историја.</p>
-        <span>Учлени се <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="show-join-form-mk">Учлени се <i class="fa-solid fa-arrow-right"></i></span>
       </div>
         <div class="empowering_communities_card">
         <img src="images/empowering_section_image_3.jpg" alt="empowering communities image 1" class="default-image-shadow">
         <h3>SПоддршка на социјално претприемништво и руралниот туризам за економски раст</h3>
         <p>Ние ги зајакнуваме локалните претприемачи да создаваат работни места и да ја поттикнуваат локалната економија.</p>
-        <span>Приклучи се<i class="fa-solid fa-arrow-right"></i></span>
+        <span class="show-join-form-mk">Приклучи се <i class="fa-solid fa-arrow-right"></i></span>
       </div>
       </div>
     </div>
@@ -752,7 +755,7 @@
       <p class="join_us_subtitle">Откриј како можеш да придонесеш за одржлив развој и вклучување на заедницата. <br/> in Makedonski Brod.</p>
       <div class="join_us_btn_group">
         <button class="green-btn join_us_green_btn">Дознај повеке</button>
-        <button>Придружи нам се<i class="fa-solid fa-arrow-right"></i></button>
+        <button class="show-join-form-mk">Придружи нам се <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
   </section>
@@ -1028,12 +1031,27 @@
       <button class="green-btn faq_contact_btn">Контакт</button>
     </div>
   </section>
+  <!--Join Us Feature MK-->
+  <section class="join_us_footer">
+    <div class="join_us_footer_container">
+      <div class="join_us_footer_heading">
+        <h2>Придружи нам се во правењето промени</h2>
+      </div>
+      <div class="join_us_footer_desc">
+        <p>Биди дел од нашата мисија за поттикнување на одржлив развој и зајакнување на нашата заедница. Заедно можеме да создадеме посветла иднина за Македонски Брод.</p>
+        <div class="join_us_footer_btn_group">
+          <a href="#AboutUsMk"><button >Дознај повеке</button></a>
+          <button class="show-join-form-mk">Зачлени Се</button>
+        </div>
+      </div>
+    </div>
+  </section>
   <!--  Footer Section-->
   <footer>
     <div class="footer_container">
       <img src="images/Footer_logo.png" alt="footer logo">
       <div class="footer_links">
-        <a href="#">Вклучи се</a>
+        <a href="#" class="show-join-form-mk">Вклучи се</a>
         <a href="#OurMissionMk">Нашата Мисија</a>
         <a href="#">Контактирај не</a>
         <a href="#">Волонтирај Денеска</a>
@@ -1072,7 +1090,60 @@
     
   </footer>
   </div>
+</div>
 
+<div id="form-overlay">
+  <!--New member en Section-->
+  <section id="join-form-en" class="hidden">
+    <form action="https://formspree.io/f/xpwrbabg" method="POST" class="join-form">
+      <h2>Join Us</h2>
+  
+      <label>Your Name:
+        <input type="text" name="Name" required>
+      </label>
+  
+      <label>Your Surname:
+        <input type="text" name="Surname" required>
+      </label>
+  
+      <label>Your Phone Number:
+        <input type="tel" name="Phonenumber" required>
+      </label>
+  
+      <label>Your Email:
+        <input type="email" name="email" required>
+      </label>
+  
+      <button type="submit">Send</button>
+      <button type="button" onclick="goBackToSite('en')">Back</button>
+    </form>
+  </section>
+  <!--new Member mk section-->
+  <section id="join-form-mk" class="hidden">
+    <form action="https://formspree.io/f/xpwrbabg" method="POST" class="join-form">
+      <h2>Учлени се</h2>
+  
+      <label>Твоето име:
+        <input type="text" name="Name" required>
+      </label>
+  
+      <label>Твоето презиме:
+        <input type="text" name="Surname" required>
+      </label>
+  
+      <label>Телефонски број:
+        <input type="tel" name="Phonenumber" required>
+      </label>
+  
+      <label>Твојот емаил:
+        <input type="email" name="email" required>
+      </label>
+  
+      <button type="submit">Прати</button>
+      <button type="button" onclick="goBackToSite('mk')">Назад</button>
+    </form>
+  </section>
+</div>
 
   <!--Scripts-->
  
@@ -1080,6 +1151,7 @@
   <script src="scripts/ProjectAndCalls.js" defer></script>
   <script src="scripts/TestemonialsSectionCode.js"></script>
   <script src="scripts/lang.js"></script>
+  <script src="scripts/joinUs.js"></script>
 </body>
 
 </html>
