@@ -8,12 +8,8 @@ let currentGalleryImages = [];
 let currentImageIndex = 0;
 
 function handleLoginClick(language = 'en') {
-  const passwordField = document.getElementById(
-    language === 'mk' ? 'admin-password-mk' : 'admin-password'
-  );
-  const loginButton = document.getElementById(
-    language === 'mk' ? 'login-button-mk' : 'login-button'
-  );
+  const passwordField = document.getElementById(language === 'mk' ? 'admin-password-mk' : 'admin-password');
+  const loginButton = document.getElementById(language === 'mk' ? 'login-button-mk' : 'login-button');
 
   if (loginStep === 0) {
     passwordField.classList.remove('hidden');
@@ -27,15 +23,9 @@ function handleLoginClick(language = 'en') {
 }
 
 function loginAdmin(language = 'en') {
-  const password = document.getElementById(
-    language === 'mk' ? 'admin-password-mk' : 'admin-password'
-  ).value;
-
-  const panel = document.getElementById(
-    language === 'mk' ? 'admin-panel-mk' : 'admin-panel'
-  );
-
-  const loginSection = document.getElementById('login-section');
+  const password = document.getElementById(language === 'mk' ? 'admin-password-mk' : 'admin-password').value;
+  const panel = document.getElementById(language === 'mk' ? 'admin-panel-mk' : 'admin-panel');
+  const loginSection = document.getElementById(language === 'mk' ? 'login-section-mk' : 'login-section-en');
 
   if (password === ADMIN_PASSWORD) {
     isAdmin = true;
@@ -50,18 +40,13 @@ function loginAdmin(language = 'en') {
 
 function logoutAdmin(language = 'en') {
   isAdmin = false;
-  const panel = document.getElementById(
-    language === 'mk' ? 'admin-panel-mk' : 'admin-panel'
-  );
-  const passwordInput = document.getElementById(
-    language === 'mk' ? 'admin-password-mk' : 'admin-password'
-  );
-  const loginButton = document.getElementById(
-    language === 'mk' ? 'login-button-mk' : 'login-button'
-  );
+  const panel = document.getElementById(language === 'mk' ? 'admin-panel-mk' : 'admin-panel');
+  const passwordInput = document.getElementById(language === 'mk' ? 'admin-password-mk' : 'admin-password');
+  const loginButton = document.getElementById(language === 'mk' ? 'login-button-mk' : 'login-button');
+  const loginSection = document.getElementById(language === 'mk' ? 'login-section-mk' : 'login-section-en');
 
   panel.classList.add('hidden');
-  document.getElementById('login-section').classList.remove('hidden');
+  loginSection.classList.remove('hidden');
   passwordInput.value = '';
   passwordInput.classList.add('hidden');
   loginButton.textContent = language === 'mk' ? 'Логирај Се' : 'Log In';
@@ -75,89 +60,94 @@ function saveToLocalStorage() {
 }
 
 function renderProjects() {
-  const list =
-    document.querySelector('.lang-text.active #project-list') ||
-    document.querySelector('.lang-text.active #project-list-mk');
-  if (!list) return;
-  list.innerHTML = '';
+  const listEn = document.getElementById('project-list');
+  const listMk = document.getElementById('project-list-mk');
+
+  if (listEn) listEn.innerHTML = '';
+  if (listMk) listMk.innerHTML = '';
 
   projects
     .filter(p => currentFilter === 'all' || p.status === currentFilter)
     .forEach((p, index) => {
-      const item = document.createElement('div');
-      item.className = 'project-item';
+      const createProjectItem = () => {
+        const item = document.createElement('div');
+        item.className = 'project-item';
 
-      const profileImg = document.createElement('img');
-      profileImg.src = p.images[0] || '';
-      profileImg.className = 'profile-img';
-      profileImg.onclick = () => showFullImageGallery(p.images, 0);
-      item.appendChild(profileImg);
+        const profileImg = document.createElement('img');
+        profileImg.src = p.images[0] || '';
+        profileImg.className = 'profile-img';
+        profileImg.onclick = () => showFullImageGallery(p.images, 0);
+        item.appendChild(profileImg);
 
-      const title = document.createElement('h3');
-      title.textContent = p.title;
-      item.appendChild(title);
+        const title = document.createElement('h3');
+        title.textContent = p.title;
+        item.appendChild(title);
 
-      const desc = document.createElement('p');
-      desc.textContent = p.description;
-      item.appendChild(desc);
+        const desc = document.createElement('p');
+        desc.textContent = p.description;
+        item.appendChild(desc);
 
-      const galleryWrapper = document.createElement('div');
-      galleryWrapper.className = 'project-gallery-wrapper';
+        const galleryWrapper = document.createElement('div');
+        galleryWrapper.className = 'project-gallery-wrapper';
 
-      const gallery = document.createElement('div');
-      gallery.className = 'project-gallery';
-      p.images.slice(1).forEach((imgUrl, imgIndex) => {
-        const img = document.createElement('img');
-        img.src = imgUrl;
-        img.onclick = () => showFullImageGallery(p.images, imgIndex + 1);
-        gallery.appendChild(img);
-      });
+        const gallery = document.createElement('div');
+        gallery.className = 'project-gallery';
+        p.images.slice(1).forEach((imgUrl, imgIndex) => {
+          const img = document.createElement('img');
+          img.src = imgUrl;
+          img.onclick = () => showFullImageGallery(p.images, imgIndex + 1);
+          gallery.appendChild(img);
+        });
 
-      galleryWrapper.appendChild(gallery);
-      item.appendChild(galleryWrapper);
+        galleryWrapper.appendChild(gallery);
+        item.appendChild(galleryWrapper);
 
-      if (isAdmin) {
-        if (p.status === 'current') {
-          const convertBtn = document.createElement('button');
-          convertBtn.textContent = 'Означи како завршен';
-          convertBtn.onclick = () => {
-            p.status = 'completed';
-            saveToLocalStorage();
-            renderProjects();
+        if (isAdmin) {
+          if (p.status === 'current') {
+            const convertBtn = document.createElement('button');
+            convertBtn.textContent = 'Означи како завршен';
+            convertBtn.onclick = () => {
+              p.status = 'completed';
+              saveToLocalStorage();
+              renderProjects();
+            };
+            item.appendChild(convertBtn);
+          }
+
+          const addImagesInput = document.createElement('input');
+          addImagesInput.type = 'file';
+          addImagesInput.multiple = true;
+          addImagesInput.onchange = () => {
+            const files = addImagesInput.files;
+            const newImages = [];
+            let loadedCount = 0;
+            for (let file of files) {
+              const reader = new FileReader();
+              reader.onload = function(e) {
+                newImages.push(e.target.result);
+                loadedCount++;
+                if (loadedCount === files.length) {
+                  projects[index].images.push(...newImages);
+                  saveToLocalStorage();
+                  renderProjects();
+                }
+              };
+              reader.readAsDataURL(file);
+            }
           };
-          item.appendChild(convertBtn);
+          item.appendChild(addImagesInput);
+
+          const deleteBtn = document.createElement('button');
+          deleteBtn.textContent = 'Избриши проект';
+          deleteBtn.onclick = () => deleteProject(index);
+          item.appendChild(deleteBtn);
         }
 
-        const addImagesInput = document.createElement('input');
-        addImagesInput.type = 'file';
-        addImagesInput.multiple = true;
-        addImagesInput.onchange = () => {
-          const files = addImagesInput.files;
-          const newImages = [];
-          let loadedCount = 0;
-          for (let file of files) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-              newImages.push(e.target.result);
-              loadedCount++;
-              if (loadedCount === files.length) {
-                projects[index].images.push(...newImages);
-                saveToLocalStorage();
-                renderProjects();
-              }
-            };
-            reader.readAsDataURL(file);
-          }
-        };
-        item.appendChild(addImagesInput);
+        return item;
+      };
 
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Избриши проект';
-        deleteBtn.onclick = () => deleteProject(index);
-        item.appendChild(deleteBtn);
-      }
-
-      list.appendChild(item);
+      if (listEn) listEn.appendChild(createProjectItem());
+      if (listMk) listMk.appendChild(createProjectItem());
     });
 }
 
@@ -168,11 +158,11 @@ function deleteProject(index) {
   renderProjects();
 }
 
-function addProject() {
-  const title = document.getElementById('project-title').value;
-  const description = document.getElementById('project-description').value;
-  const status = document.getElementById('project-status').value;
-  const files = document.getElementById('project-images').files;
+function addProject(language = 'en') {
+  const title = document.getElementById(language === 'mk' ? 'project-title-mk' : 'project-title').value;
+  const description = document.getElementById(language === 'mk' ? 'project-description-mk' : 'project-description').value;
+  const status = document.getElementById(language === 'mk' ? 'project-status-mk' : 'project-status').value;
+  const files = document.getElementById(language === 'mk' ? 'project-images-mk' : 'project-images').files;
   const images = [];
 
   for (let file of files) {
@@ -183,33 +173,32 @@ function addProject() {
         projects.push({ title, description, status, images });
         saveToLocalStorage();
         renderProjects();
+        alert(language === 'mk' ? 'Проектот е успешно додаден!' : 'Project successfully added!');
       }
     };
     reader.readAsDataURL(file);
   }
 }
 
-function setFilter(filter) {
-  currentFilter = filter;
-  renderProjects();
-}
-
-function addCall() {
-  const text = document.getElementById('call-text').value;
-  const file = document.getElementById('call-image').files[0];
+function addCall(language = 'en') {
+  const text = document.getElementById(language === 'mk' ? 'call-text-mk' : 'call-text').value;
+  const file = document.getElementById(language === 'mk' ? 'call-image-mk' : 'call-image').files[0];
   const reader = new FileReader();
 
   reader.onload = function(e) {
     calls.push({ text, image: e.target.result });
     saveToLocalStorage();
     renderCalls();
+    alert(language === 'mk' ? 'Јавниот повик е успешно објавен!' : 'Public call successfully added!');
   };
 
-  if (file) reader.readAsDataURL(file);
-  else {
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
     calls.push({ text, image: null });
     saveToLocalStorage();
     renderCalls();
+    alert(language === 'mk' ? 'Јавниот повик е успешно објавен!' : 'Public call successfully added!');
   }
 }
 
@@ -221,30 +210,46 @@ function deleteCall(index) {
 }
 
 function renderCalls() {
-  const list =
-    document.querySelector('.lang-text.active #call-list') ||
-    document.querySelector('.lang-text.active #call-list-mk');
-  if (!list) return;
-  list.innerHTML = '';
+  const listEn = document.getElementById('call-list');
+  const listMk = document.getElementById('call-list-mk');
+
+  if (listEn) listEn.innerHTML = '';
+  if (listMk) listMk.innerHTML = '';
 
   calls.forEach((c, index) => {
-    const item = document.createElement('div');
-    item.className = 'call-item';
-    item.innerHTML = `<p>${c.text}</p>`;
-    if (c.image) {
-      const img = document.createElement('img');
-      img.src = c.image;
-      img.onclick = () => showFullImageGallery([c.image], 0);
-      item.appendChild(img);
-    }
-    if (isAdmin) {
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'Избриши';
-      delBtn.onclick = () => deleteCall(index);
-      item.appendChild(delBtn);
-    }
-    list.appendChild(item);
+    const createItem = () => {
+      const item = document.createElement('div');
+      item.className = 'call-item';
+
+      const p = document.createElement('p');
+      p.textContent = c.text;
+      item.appendChild(p);
+
+      if (c.image) {
+        const img = document.createElement('img');
+        img.src = c.image;
+        img.onclick = () => showFullImageGallery([c.image], 0);
+        item.appendChild(img);
+      }
+
+      if (isAdmin) {
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Избриши';
+        delBtn.onclick = () => deleteCall(index);
+        item.appendChild(delBtn);
+      }
+
+      return item;
+    };
+
+    if (listEn) listEn.appendChild(createItem());
+    if (listMk) listMk.appendChild(createItem());
   });
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  renderProjects();
 }
 
 function showFullImageGallery(images, startIndex) {
@@ -275,6 +280,6 @@ function closeImageViewer(event) {
   document.getElementById('image-viewer').classList.add('hidden');
 }
 
-// Стартна иницијализација
+// Почетно вчитување
 renderProjects();
 renderCalls();

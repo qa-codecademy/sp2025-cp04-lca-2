@@ -77,8 +77,10 @@
             <li><a href="#OurTeam">Our Team</a></li>
           </ul>
           <div id="login-section">
-            <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
-            <button  onclick="handleLoginClick()" id="login-button">Log In</button>
+            <section id="login-section-en">
+              <input type="password" id="admin-password" class="hidden" />
+              <button id="login-button" onclick="handleLoginClick('en')">Log In</button>
+            </section>
           </div>
           <a href="https://www.gofundme.com/" target="_blank">
           <button aria-label="Donate to support" class="header_donate_btn">Donate</button>
@@ -100,8 +102,10 @@
                 <li><a href="#OurTeam">Our Team</a></li>
               </ul>
               <div id="login-section">
-                <input type="password" id="admin-password" placeholder="Admin Password" class="hidden" />
-                <button  onclick="handleLoginClick()" id="login-button">Log In</button>
+                <section id="login-section-en">
+                  <input type="password" id="admin-password" class="hidden" />
+                  <button id="login-button" onclick="handleLoginClick('en')">Log In</button>
+                </section>
               </div>
               <button aria-label="Donate to support">Donate</button>
             </div>
@@ -610,8 +614,10 @@
               <li><a href="#OurTeamMk">Нашиот Тим</a></li>
             </ul>
             <div id="login-section">
-              <input type="password" id="admin-password-mk" placeholder="Admin Password" class="hidden" />
-              <button onclick="handleLoginClick('mk')" id="login-button-mk">Логирај Се</button>
+              <section id="login-section-mk">
+                <input type="password" id="admin-password-mk" class="hidden" />
+                <button id="login-button-mk" onclick="handleLoginClick('mk')">Логирај Се</button>
+              </section>
               
             </div>
             <a href="https://www.gofundme.com/" target="_blank">
@@ -633,8 +639,11 @@
                   <li><a href="#projectShowcaseMk">Проекти</a></li>
                   <li><a href="#OurTeamMK">Нашиот Тим</a></li>
                 </ul>
-                <input type="password" id="admin-password-mk" placeholder="Admin Password" class="hidden" />
-    <button onclick="handleLoginClick('mk')" id="login-button-mk">Логирај Се</button>
+          
+                <section id="login-section-mk">
+                  <input type="password" id="admin-password-mk" class="hidden" />
+                  <button id="login-button-mk" onclick="handleLoginClick('mk')">Логирај Се</button>
+                </section>
 
                 <button aria-label="Donate to support">Донирај</button>
               </div>
@@ -655,25 +664,24 @@
     </header>
      <!--Admin Feature-->
      <section id="admin-panel-mk" class="hidden">
-
-      <button onclick="logoutAdmin('mk')" id="logout-button">Одлогирај се</button>
-
-
-    <h2>Add Project</h2>
-    <input type="text" id="project-title" placeholder="Наслов на проектот">
-    <textarea id="project-description" placeholder="Опис на проектот"></textarea>
-    <select id="project-status">
-      <option value="current">Моментален</option>
-      <option value="completed">Завршен</option>
-    </select>
-    <input type="file" id="project-images" multiple>
-    <button onclick="addProject()" id="add-project-button">Додај Проект</button>
-
-    <h2>Public Calls</h2>
-    <textarea id="call-text" placeholder="Внеси текст за јавниот повик"></textarea>
-    <input type="file" id="call-image">
-    <button onclick="addCall()" id="publish-call-button">Објави Повик</button>
-  </section>
+      <button onclick="logoutAdmin('mk')" id="logout-button-mk">Одлогирај се</button>
+    
+      <h2>Add Project</h2>
+      <input type="text" id="project-title-mk" placeholder="Наслов на проектот">
+      <textarea id="project-description-mk" placeholder="Опис на проектот"></textarea>
+      <select id="project-status-mk">
+        <option value="current">Моментален</option>
+        <option value="completed">Завршен</option>
+      </select>
+      <input type="file" id="project-images-mk" multiple>
+      <button onclick="addProject('mk')" id="add-project-button-mk">Додај Проект</button>
+      
+    
+      <h2>Public Calls</h2>
+      <textarea id="call-text-mk" placeholder="Внеси текст за јавниот повик"></textarea>
+      <input type="file" id="call-image-mk">
+      <button onclick="addCall('mk')" id="publish-call-button-mk">Објави Повик</button>
+    </section>
   <!--Home Feature MK-->
   <section id="HomeMk" class="home_hero_section">
     <div class="home_hero_container">
