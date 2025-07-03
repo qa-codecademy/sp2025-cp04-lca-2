@@ -31,6 +31,10 @@ function loginAdmin(language = 'en') {
     isAdmin = true;
     panel.classList.remove('hidden');
     loginSection.classList.add('hidden');
+
+    // Скролирај до admin панелот
+    panel.scrollIntoView({ behavior: 'smooth' });
+
     renderProjects();
     renderCalls();
   } else {
@@ -262,7 +266,7 @@ function showFullImageGallery(images, startIndex, language = 'en') {
 function nextImage(language = 'en', event) {
   event.stopPropagation();
   if (currentGalleryImages.length > 0) {
-    currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+    currentImageIndex = (currentGalleryImages.length + currentImageIndex + 1) % currentGalleryImages.length;
     document.getElementById(`full-image-${language}`).src = currentGalleryImages[currentImageIndex];
   }
 }
@@ -270,7 +274,7 @@ function nextImage(language = 'en', event) {
 function prevImage(language = 'en', event) {
   event.stopPropagation();
   if (currentGalleryImages.length > 0) {
-    currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+    currentImageIndex = (currentGalleryImages.length + currentImageIndex - 1) % currentGalleryImages.length;
     document.getElementById(`full-image-${language}`).src = currentGalleryImages[currentImageIndex];
   }
 }
