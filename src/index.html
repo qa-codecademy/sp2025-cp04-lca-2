@@ -457,16 +457,15 @@
     <div id="call-list"></div>
   
     <!-- Viewer за слики во голем приказ -->
-    <div id="image-viewer" class="hidden">
-      <button class="close-button" onclick="closeImageViewer(event)">&times;</button>
-      <img id="full-image" src="">
+    <div id="image-viewer-en" class="hidden">
+      <button class="close-button" onclick="closeImageViewer('en', event)">×</button>
+      <img id="full-image-en" src="">
       <div class="nav-buttons">
-        <button onclick="prevImage(event)">&laquo; Previous</button>
-        <button onclick="nextImage(event)">Next &raquo;</button>
+        <button onclick="prevImage('en', event)">&laquo; Previous</button>
+        <button onclick="nextImage('en', event)">Next &raquo;</button>
       </div>
     </div>
-    </section>
-    <script src="ProjectAndCalls.js"></script>
+    
   <!--FAQs Feature-->
   <section class="faq_section">
     <h1>FAQs</h1>
@@ -689,17 +688,17 @@
       <h1 class="home_hero_heading">Зајакнување на заедниците за одржлив развој</h1>
       <h3 class="home_hero_subheading">Во ЛОКАЛ АКТ веруваме во поттикнување на соработката меѓу граѓаните и локалните институции со цел создавање на жива и активна заедница. Нашата мисија е да се залагаме за одржливи практики кои го подобруваат квалитетот на живот во Македонски Брод.</h3>
       <div class="home_hero_btn_group">
-        <button class="show-join-form-mk">Учлени се</button>
-        <a href="#AboutUsMk">
+        <button class="show-join-form-mk">Зачлени се</button>
+        <a href="#AboutUsHeadingMk">
         <button>Дознај Повеке</button>
         </a>
       </div>
     </div>
   </section>
   <!--  Mission and Vision Section МК-->
-  <section id="OurMissionMk" class="mission_vision">
+  <section class="mission_vision">
     <div class="mission_vision_text">
-      <h1>Нашата Мисија и Визија</h1>
+      <h1 id="OurMissionMk" >Нашата Мисија и Визија</h1>
       <p>Во ЛОКАЛ АКТ се залагаме за одржливи практики што го унапредуваат благосостојбата на заедницата. Нашите иницијативи поттикнуваат соработка помеѓу граѓаните и локалните институции, создавајќи позитивни промени во Македонски Брод.</p>
     </div>
     <div class="mission_vision_image">
@@ -725,11 +724,11 @@
         <img src="images/empowering_section_image_2.jpg" alt="empowering communities image 1" class="default-image-shadow">
         <h3>Промовирање на еколошка свест и зачувување на културното наследство</h3>
         <p>Нашите програми имаат за цел да ја заштитат животната средина, додека ја слават нашата богата културна историја.</p>
-        <span class="show-join-form-mk">Учлени се <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="show-join-form-mk">Зачлени се <i class="fa-solid fa-arrow-right"></i></span>
       </div>
         <div class="empowering_communities_card">
         <img src="images/empowering_section_image_3.jpg" alt="empowering communities image 1" class="default-image-shadow">
-        <h3>SПоддршка на социјално претприемништво и руралниот туризам за економски раст</h3>
+        <h3>Поддршка на социјално претприемништво и руралниот туризам за економски раст</h3>
         <p>Ние ги зајакнуваме локалните претприемачи да создаваат работни места и да ја поттикнуваат локалната економија.</p>
         <span class="show-join-form-mk">Приклучи се <i class="fa-solid fa-arrow-right"></i></span>
       </div>
@@ -993,15 +992,14 @@
     <div id="call-list-mk"></div>
   
     <!-- Viewer за слики во голем приказ -->
-    <div id="image-viewer" class="hidden">
-      <button class="close-button" onclick="closeImageViewer(event)">×</button>
-      <img id="full-image" src="">
-      <div class="nav-buttons hidden">
-        <button onclick="prevImage(event)">&laquo; Претходна</button>
-        <button onclick="nextImage(event)">Следна &raquo;</button>
+    <div id="image-viewer-mk" class="hidden">
+      <button class="close-button" onclick="closeImageViewer('mk', event)">×</button>
+      <img id="full-image-mk" src="">
+      <div class="nav-buttons">
+        <button onclick="prevImage('mk', event)">&laquo; Претходна</button>
+        <button onclick="nextImage('mk', event)">Следна &raquo;</button>
       </div>
     </div>
-    
     <!--FAQs Feature МК-->
   <section class="faq_section">
     <h1>Често поставувани прашања</h1>

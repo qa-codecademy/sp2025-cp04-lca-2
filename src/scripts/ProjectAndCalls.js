@@ -69,14 +69,14 @@ function renderProjects() {
   projects
     .filter(p => currentFilter === 'all' || p.status === currentFilter)
     .forEach((p, index) => {
-      const createProjectItem = () => {
+      const createProjectItem = (language) => {
         const item = document.createElement('div');
         item.className = 'project-item';
 
         const profileImg = document.createElement('img');
         profileImg.src = p.images[0] || '';
         profileImg.className = 'profile-img';
-        profileImg.onclick = () => showFullImageGallery(p.images, 0);
+        profileImg.onclick = () => showFullImageGallery(p.images, 0, language);
         item.appendChild(profileImg);
 
         const title = document.createElement('h3');
@@ -95,7 +95,7 @@ function renderProjects() {
         p.images.slice(1).forEach((imgUrl, imgIndex) => {
           const img = document.createElement('img');
           img.src = imgUrl;
-          img.onclick = () => showFullImageGallery(p.images, imgIndex + 1);
+          img.onclick = () => showFullImageGallery(p.images, imgIndex + 1, language);
           gallery.appendChild(img);
         });
 
@@ -146,8 +146,8 @@ function renderProjects() {
         return item;
       };
 
-      if (listEn) listEn.appendChild(createProjectItem());
-      if (listMk) listMk.appendChild(createProjectItem());
+      if (listEn) listEn.appendChild(createProjectItem('en'));
+      if (listMk) listMk.appendChild(createProjectItem('mk'));
     });
 }
 
@@ -217,7 +217,7 @@ function renderCalls() {
   if (listMk) listMk.innerHTML = '';
 
   calls.forEach((c, index) => {
-    const createItem = () => {
+    const createItem = (language) => {
       const item = document.createElement('div');
       item.className = 'call-item';
 
@@ -228,7 +228,7 @@ function renderCalls() {
       if (c.image) {
         const img = document.createElement('img');
         img.src = c.image;
-        img.onclick = () => showFullImageGallery([c.image], 0);
+        img.onclick = () => showFullImageGallery([c.image], 0, language);
         item.appendChild(img);
       }
 
@@ -242,8 +242,8 @@ function renderCalls() {
       return item;
     };
 
-    if (listEn) listEn.appendChild(createItem());
-    if (listMk) listMk.appendChild(createItem());
+    if (listEn) listEn.appendChild(createItem('en'));
+    if (listMk) listMk.appendChild(createItem('mk'));
   });
 }
 
@@ -252,32 +252,32 @@ function setFilter(filter) {
   renderProjects();
 }
 
-function showFullImageGallery(images, startIndex) {
+function showFullImageGallery(images, startIndex, language = 'en') {
   currentGalleryImages = images;
   currentImageIndex = startIndex;
-  document.getElementById('full-image').src = images[startIndex];
-  document.getElementById('image-viewer').classList.remove('hidden');
+  document.getElementById(`full-image-${language}`).src = images[startIndex];
+  document.getElementById(`image-viewer-${language}`).classList.remove('hidden');
 }
 
-function nextImage(event) {
+function nextImage(language = 'en', event) {
   event.stopPropagation();
   if (currentGalleryImages.length > 0) {
     currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
-    document.getElementById('full-image').src = currentGalleryImages[currentImageIndex];
+    document.getElementById(`full-image-${language}`).src = currentGalleryImages[currentImageIndex];
   }
 }
 
-function prevImage(event) {
+function prevImage(language = 'en', event) {
   event.stopPropagation();
   if (currentGalleryImages.length > 0) {
     currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-    document.getElementById('full-image').src = currentGalleryImages[currentImageIndex];
+    document.getElementById(`full-image-${language}`).src = currentGalleryImages[currentImageIndex];
   }
 }
 
-function closeImageViewer(event) {
+function closeImageViewer(language = 'en', event) {
   event.stopPropagation();
-  document.getElementById('image-viewer').classList.add('hidden');
+  document.getElementById(`image-viewer-${language}`).classList.add('hidden');
 }
 
 // Почетно вчитување
