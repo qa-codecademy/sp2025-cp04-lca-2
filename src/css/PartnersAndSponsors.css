@@ -1,0 +1,81 @@
+
+  .partners_section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(1440px, 90%);
+    margin: 0 auto;
+  }
+  
+  .partners_section h2 {
+    font-size: 48px;
+    color: rgba(0,0,0,0.8);
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .partners_quote {
+    color: #73B925;
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .partners_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 0;
+    margin-top: 64px;
+    max-width: 800px;
+    width: 100%;
+
+  }
+
+  .partners_grid_item {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    border-radius: 5px;
+  }
+
+  .partner_logo {
+    object-fit: cover;
+    max-width: 250px;
+    background-color: white;
+  }
+
+  @media (max-width: 768px) {
+
+    .partners_section {
+      padding: 64px 0;
+    }
+
+    .partners_grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .partners_section {
+      & h2 {
+        font-size: 36px;
+        text-align: left;
+      }
+    }
+
+    .partners_quote {
+      font-size: 18px;
+      margin-top: 32px;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .partners_grid {
+      grid-template-columns: 1fr;
+    }
+  }

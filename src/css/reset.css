@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.default-image-shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.green-btn {
+    border: 2px solid #73b925;
+    background-color: white;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #73b925;
+    transition: all ease-in 0.1s;
+}

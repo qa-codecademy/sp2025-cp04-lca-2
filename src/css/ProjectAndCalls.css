@@ -1,0 +1,208 @@
+/* За EN и MK проект секции */
+#projectShowcase, #projectShowcaseMk {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  padding: 20px;
+  max-width: 100%;
+  scroll-margin-top: 100px
+}
+
+#publicCalls, #publicCallsMk {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  max-width: 100%;
+  padding: 20px;
+}
+
+#projectShowcase h2, #projectShowcaseMk h2 {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+#projectShowcase p, #projectShowcaseMk p {
+  color: #72b824;
+}
+
+#publicCalls h2, #publicCallsMk h2 {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+/* Админ панел */
+#admin-panel {
+  background-color: white;
+}
+
+/* Копчиња за филтер EN и MK */
+#filter-all, #filter-current, #filter-completed,
+#filter-allMk, #filter-currentMk, #filter-completedMk {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #72b824;
+  background-color: #72b824;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Картички */
+.project-item, .call-item {
+  border: 1px solid #72b824;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Профил слика */
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Наслов и опис */
+.project-item h3 {
+  text-align: center;
+  color: black;
+}
+
+.project-item p {
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Галерија */
+.project-gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.project-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.project-gallery img, .call-item img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Viewer EN & MK */
+#image-viewer-en,
+#image-viewer-mk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+#image-viewer-en.hidden,
+#image-viewer-mk.hidden {
+  display: none;
+}
+
+#full-image-en,
+#full-image-mk {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  background-color: #72b824;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #5da31d;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  background: none;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+/* Листи */
+#call-list, #call-list-mk {
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  .project-item {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .project-gallery img, .call-item img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+/* Скриени елементи */
+.hidden {
+  display: none;
+}
+
+/* Обвивки за филтер копчиња */
+#filter-buttons, #filter-buttonsMk {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+#filter-buttons button,
+#filter-buttonsMk button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}

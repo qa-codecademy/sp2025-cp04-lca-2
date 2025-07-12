@@ -1,0 +1,82 @@
+/* === Admin Panel Styling === */
+#admin-panel-mk {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  scroll-margin-top: 120px
+}
+
+#admin-panel-mk h2 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 5px;
+}
+
+#admin-panel-mk input[type="text"],
+#admin-panel-mk input[type="file"],
+#admin-panel-mk textarea,
+#admin-panel-mk select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#admin-panel-mk button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 5px 20px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#admin-panel-mk button:hover {
+  background-color: #45a049;
+}
+
+#admin-panel-mk hr {
+  border: none;
+  border-top: 2px dashed #ccc;
+  margin: 40px 0;
+}
+
+/* === Responsive for Mobile === */
+@media (max-width: 600px) {
+  #admin-panel-mk {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  #admin-panel-mk h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #admin-panel-mk button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+  }
+
+  #admin-panel-mk input[type="text"],
+  #admin-panel-mk textarea,
+  #admin-panel-mk select,
+  #admin-panel-mk input[type="file"] {
+    font-size: 16px;
+  }
+}

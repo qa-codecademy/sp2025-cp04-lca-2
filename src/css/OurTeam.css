@@ -1,0 +1,156 @@
+.our_team {
+  background-color: #F9FAF7;
+  scroll-margin-top: 100px
+}
+
+.our_team_container {
+  min-height: 100vh;
+  width: min(1440px, 90%);
+  height: 100%;
+  margin: 0 auto;
+}
+
+.our_team_header {
+  padding: 64px 0;
+
+  & h2 {
+    color: rgba(0,0,0,0.8);
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 12px;
+  }
+
+  & p:last-child {
+    font-size: 18px;
+    color: rgba(0,0,0,0.8);
+    font-weight: normal;
+    margin-top: 12px;
+  }
+}
+
+.our_team_grid {
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 72px;
+  display: grid;
+}
+
+.our_team_card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.our_team_avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: red;
+  margin-bottom: 18px;
+}
+
+.our_team_name {
+  color: rgba(0,0,0,0.8);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.our_team_role {
+  color: #73B925;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.our_team_bio {
+  color: #8c8c8c;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.our_team_social_icons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.our_team_social_icons i {
+  color: #000;
+  font-size: 20px;
+}
+
+.our_team_footer {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 64px;
+
+  & h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: rgba(0,0,0,0.8);
+  }
+
+  & p {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.8);
+  }
+}
+
+.our_team_footer_green_btn {
+  background-color: #73B925 !important;
+  color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+  .our_team_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .our_team_grid {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+@media (max-width: 640px) {
+  .our_team_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .our_team_header {
+    & h2 {
+      font-size: 36px;
+    }
+
+    & p:last-child {
+      font-size: 16px;
+    }
+  }
+
+  .our_team_name {
+    font-size: 18px;
+  }
+
+  .our_team_role {
+    font-size: 16px;
+  }
+
+  .our_team_footer {
+    & h2 {
+      font-size: 24px;
+    }
+
+    & p {
+      font-size: 16px;
+    }
+  }
+}
